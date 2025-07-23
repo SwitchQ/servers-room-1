@@ -75,8 +75,11 @@ export default function HomePage() {
           }}
         ></div>
 
-        {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+        {/* Strong Overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-black/60"></div>
+
+        {/* Additional dark overlay for extra contrast */}
+        <div className="absolute inset-0 bg-black/40"></div>
 
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-pattern-dots opacity-20"></div>
@@ -84,19 +87,19 @@ export default function HomePage() {
         <div className="container-custom relative z-10">
           <div className="flex items-center justify-center min-h-[60vh]">
             <div className="text-center animate-fade-in-up max-w-5xl mx-auto">
-              <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm text-white rounded-full text-sm font-medium mb-6">
+              <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-medium mb-6 drop-shadow-lg">
                 🚀 פתרון IoT מתקדם לחדרי שרתים
               </div>
-              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-6">
-                <span className="bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">
+              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-6 drop-shadow-2xl">
+                <span className="bg-gradient-to-r from-primary-300 to-secondary-300 bg-clip-text text-transparent drop-shadow-lg">
                   הגנה חכמה
                 </span>
                 <br />
-                על חדרי השרתים שלכם
+                <span className="drop-shadow-2xl">על חדרי השרתים שלכם</span>
               </h1>
-              <p className="text-xl lg:text-2xl text-gray-200 leading-relaxed mb-10 max-w-4xl mx-auto">
+              <p className="text-xl lg:text-2xl text-gray-100 leading-relaxed mb-10 max-w-4xl mx-auto drop-shadow-lg">
                 פתרון IoT מתקדם לניטור ובקרה של תנאי הסביבה בחדרי שרתים -
-                <span className="font-semibold text-primary-300">
+                <span className="font-semibold text-white">
                   {" "}
                   טמפרטורה, לחות, דליפות מים וגישה לא מורשית
                 </span>
