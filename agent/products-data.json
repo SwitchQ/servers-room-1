@@ -1,0 +1,595 @@
+{
+  "sensors": [
+    {
+      "id": "temp-humidity",
+      "name": {
+        "en": "Temperature & Humidity Sensor",
+        "he": "חיישן טמפרטורה ולחות"
+      },
+      "description": {
+        "en": "Wireless temperature and humidity logger for server room climate monitoring",
+        "he": "חיישן אלחוטי לניטור טמפרטורה ולחות בחדרי שרתים"
+      },
+      "useCase": {
+        "en": "Prevents overheating and humidity damage to sensitive equipment",
+        "he": "מונע התחממות יתר ונזקי לחות לציוד הרגיש"
+      },
+      "specifications": {
+        "temperatureRange": {
+          "value": "-35°C to +70°C",
+          "he": "-35°C עד +70°C"
+        },
+        "temperatureAccuracy": {
+          "value": "±0.4°C (0°C to +70°C), ±0.5°C (-35°C to 0°C)",
+          "he": "±0.4°C (0°C עד +70°C), ±0.5°C (-35°C עד 0°C)"
+        },
+        "humidityRange": {
+          "value": "0-99% RH",
+          "he": "0-99% RH"
+        },
+        "humidityAccuracy": {
+          "value": "±3% (0-90% RH), ±4% (90-99% RH)",
+          "he": "±3% (0-90% RH), ±4% (90-99% RH)"
+        },
+        "batteryLife": {
+          "value": "5 years",
+          "he": "5 שנים"
+        },
+        "memoryCapacity": {
+          "value": "40,000 measurements",
+          "he": "40,000 מדידות"
+        },
+        "measurementInterval": {
+          "value": "1 minute to 10 days (configurable)",
+          "he": "דקה אחת עד 10 ימים (ניתן להגדרה)"
+        }
+      },
+      "features": [
+        {
+          "en": "High accuracy temperature and humidity monitoring",
+          "he": "ניטור טמפרטורה ולחות ברמת דיוק גבוהה"
+        },
+        {
+          "en": "5-year maintenance-free battery operation",
+          "he": "5 שנות פעולה ללא תחזוקה על סוללה"
+        },
+        {
+          "en": "40,000 measurement storage capacity",
+          "he": "יכולת אחסון של 40,000 מדידות"
+        },
+        {
+          "en": "Configurable measurement intervals",
+          "he": "מרווחי מדידה הניתנים להגדרה"
+        }
+      ],
+      "image": "/images/sensors/temp-humidity-sensor.jpg",
+      "productUrl": "https://getefento.com/product/wireless-temperature-and-humidity-logger-bluetooth-low-energy/",
+      "category": "environmental"
+    },
+    {
+      "id": "water-leak",
+      "name": {
+        "en": "Water Leak Sensor",
+        "he": "חיישן דליפות מים"
+      },
+      "description": {
+        "en": "Wireless water leak detection sensor for server room protection",
+        "he": "חיישן אלחוטי לזיהוי דליפות מים להגנה על חדרי שרתים"
+      },
+      "useCase": {
+        "en": "Detects leaks from AC units, pipes, and cooling systems before they cause damage",
+        "he": "מזהה דליפות ממזגנים, צנרת ומערכות קירור לפני שהן גורמות נזק"
+      },
+      "specifications": {
+        "detectionType": {
+          "value": "Conductive liquid detection",
+          "he": "זיהוי נוזלים מוליכים"
+        },
+        "batteryLife": {
+          "value": "5 years",
+          "he": "5 שנים"
+        },
+        "memoryCapacity": {
+          "value": "40,000 measurements",
+          "he": "40,000 מדידות"
+        },
+        "alertType": {
+          "value": "Immediate notification upon detection",
+          "he": "התראה מיידית עם הזיהוי"
+        },
+        "installationType": {
+          "value": "Floor-level probe mounting",
+          "he": "התקנת בדיקה ברמת הרצפה"
+        }
+      },
+      "features": [
+        {
+          "en": "Immediate water leak detection and alerts",
+          "he": "זיהוי והתראה מיידית על דליפות מים"
+        },
+        {
+          "en": "5-year maintenance-free operation",
+          "he": "5 שנות פעולה ללא תחזוקה"
+        },
+        {
+          "en": "Simple floor-level installation",
+          "he": "התקנה פשוטה ברמת הרצפה"
+        },
+        {
+          "en": "Critical for server room protection",
+          "he": "קריטי להגנה על חדרי שרתים"
+        }
+      ],
+      "image": "/images/sensors/water-leak-sensor.jpg",
+      "productUrl": "https://getefento.com/product/wireless-water-leak-logger-bluetooth-low-energy/",
+      "category": "safety"
+    },
+    {
+      "id": "motion-access",
+      "name": {
+        "en": "Motion/Access Sensor",
+        "he": "חיישן תנועה וגישה"
+      },
+      "description": {
+        "en": "PIR motion sensor for unauthorized access detection in server rooms",
+        "he": "חיישן תנועה PIR לזיהוי גישה לא מורשית בחדרי שרתים"
+      },
+      "useCase": {
+        "en": "Ensures only authorized personnel enter the server room",
+        "he": "מבטיח שרק אנשים מורשים נכנסים לחדר השרתים"
+      },
+      "specifications": {
+        "sensorType": {
+          "value": "PIR (Passive Infrared)",
+          "he": "PIR (אינפרא אדום פסיבי)"
+        },
+        "detectionRange": {
+          "value": "Up to 12 meters",
+          "he": "עד 12 מטר"
+        },
+        "fieldOfView": {
+          "value": "40° × 105°",
+          "he": "40° × 105°"
+        },
+        "detectionZones": {
+          "value": "68 beams",
+          "he": "68 קרני זיהוי"
+        },
+        "batteryLife": {
+          "value": "5 years",
+          "he": "5 שנים"
+        },
+        "memoryCapacity": {
+          "value": "40,000 measurements",
+          "he": "40,000 מדידות"
+        },
+        "detectionConditions": {
+          "value": "Temperature difference >4°C, movement speed >1.0m/s",
+          "he": "הפרש טמפרטורה >4°C, מהירות תנועה >1.0 מ/ש"
+        }
+      },
+      "features": [
+        {
+          "en": "Wide detection coverage (40° × 105°)",
+          "he": "כיסוי זיהוי רחב (40° × 105°)"
+        },
+        {
+          "en": "12-meter detection range",
+          "he": "טווח זיהוי של 12 מטר"
+        },
+        {
+          "en": "Configurable for motion or occupancy detection",
+          "he": "ניתן להגדרה לזיהוי תנועה או נוכחות"
+        },
+        {
+          "en": "Ideal for security monitoring",
+          "he": "אידיאלי לניטור אבטחה"
+        }
+      ],
+      "image": "/images/sensors/motion-sensor.jpg",
+      "productUrl": "https://getefento.com/product/motion-occupancy-sensor/",
+      "category": "security"
+    }
+  ],
+  "gateway": {
+    "id": "ble-poe-gateway",
+    "name": {
+      "en": "BLE PoE Gateway",
+      "he": "שער תקשורת BLE"
+    },
+    "description": {
+      "en": "Bluetooth Low Energy gateway with Power over Ethernet for connecting sensors to the cloud",
+      "he": "שער Bluetooth Low Energy עם Power over Ethernet לחיבור חיישנים לענן"
+    },
+    "useCase": {
+      "en": "Connects all sensors to the internet and cloud platform for remote monitoring",
+      "he": "מחבר את כל החיישנים לאינטרנט ולפלטפורמת הענן לניטור מרחוק"
+    },
+    "specifications": {
+      "sensorSupport": {
+        "value": "Up to 128 sensors",
+        "he": "עד 128 חיישנים"
+      },
+      "communicationRange": {
+        "value": "100m (open space), 20-30m (indoors)",
+        "he": "100 מטר (שטח פתוח), 20-30 מטר (בתוך מבנים)"
+      },
+      "connectivity": {
+        "value": "Ethernet RJ45 + PoE 802.3af",
+        "he": "Ethernet RJ45 + PoE 802.3af"
+      },
+      "powerSupply": {
+        "value": "5V DC USB-C or PoE 802.3af",
+        "he": "5V DC USB-C או PoE 802.3af"
+      },
+      "memoryCapacity": {
+        "value": "500,000 measurements",
+        "he": "500,000 מדידות"
+      },
+      "encryption": {
+        "value": "AES128",
+        "he": "AES128"
+      },
+      "operatingConditions": {
+        "value": "0-40°C, 10-90% RH, Indoor use only",
+        "he": "0-40°C, 10-90% RH, שימוש פנימי בלבד"
+      },
+      "dimensions": {
+        "value": "110 × 80 × 25 mm",
+        "he": "110 × 80 × 25 מ\"מ"
+      },
+      "weight": {
+        "value": "105g",
+        "he": "105 גרם"
+      }
+    },
+    "features": [
+      {
+        "en": "Supports up to 128 Efento sensors",
+        "he": "תמיכה בעד 128 חיישני Efento"
+      },
+      {
+        "en": "Power over Ethernet (PoE) support",
+        "he": "תמיכה ב-Power over Ethernet (PoE)"
+      },
+      {
+        "en": "500,000 measurement local storage",
+        "he": "אחסון מקומי של 500,000 מדידות"
+      },
+      {
+        "en": "AES128 encryption for secure communication",
+        "he": "הצפנת AES128 לתקשורת מאובטחת"
+      },
+      {
+        "en": "Local and cloud operation modes",
+        "he": "מצבי פעולה מקומיים ובענן"
+      },
+      {
+        "en": "Easy setup via mobile app",
+        "he": "הגדרה קלה באמצעות אפליקציה ניידת"
+      }
+    ],
+    "image": "/images/gateway/ble-poe-gateway.jpg",
+    "productUrl": "https://getefento.com/product/efento-gateway-bluetooth-ethernet-with-poe/",
+    "category": "infrastructure"
+  },
+  "packages": [
+    {
+      "id": "basic",
+      "name": {
+        "en": "Basic Package",
+        "he": "חבילה בסיסית"
+      },
+      "description": {
+        "en": "Essential monitoring for small server rooms",
+        "he": "ניטור חיוני לחדרי שרתים קטנים"
+      },
+      "components": [
+        {
+          "item": "temp-humidity",
+          "quantity": 2,
+          "name": {
+            "en": "Temperature & Humidity Sensors",
+            "he": "חיישני טמפרטורה ולחות"
+          }
+        },
+        {
+          "item": "water-leak",
+          "quantity": 1,
+          "name": {
+            "en": "Water Leak Sensor",
+            "he": "חיישן דליפות מים"
+          }
+        },
+        {
+          "item": "ble-poe-gateway",
+          "quantity": 1,
+          "name": {
+            "en": "BLE PoE Gateway",
+            "he": "שער BLE"
+          }
+        }
+      ],
+      "features": [
+        {
+          "en": "Cloud platform access",
+          "he": "גישה לפלטפורמת הענן"
+        },
+        {
+          "en": "Technical support",
+          "he": "תמיכה טכנית"
+        },
+        {
+          "en": "Mobile app configuration",
+          "he": "הגדרה באפליקציה ניידת"
+        }
+      ],
+      "idealFor": {
+        "en": "Small offices, single server rooms up to 20m²",
+        "he": "משרדים קטנים, חדרי שרתים בודדים עד 20 מ\"ר"
+      }
+    },
+    {
+      "id": "professional",
+      "name": {
+        "en": "Professional Package",
+        "he": "חבילה מקצועית"
+      },
+      "description": {
+        "en": "Comprehensive monitoring for medium-sized server rooms",
+        "he": "ניטור מקיף לחדרי שרתים בגודל בינוני"
+      },
+      "components": [
+        {
+          "item": "temp-humidity",
+          "quantity": 4,
+          "name": {
+            "en": "Temperature & Humidity Sensors",
+            "he": "חיישני טמפרטורה ולחות"
+          }
+        },
+        {
+          "item": "water-leak",
+          "quantity": 2,
+          "name": {
+            "en": "Water Leak Sensors",
+            "he": "חיישני דליפות מים"
+          }
+        },
+        {
+          "item": "motion-access",
+          "quantity": 2,
+          "name": {
+            "en": "Motion/Access Sensors",
+            "he": "חיישני תנועה וגישה"
+          }
+        },
+        {
+          "item": "ble-poe-gateway",
+          "quantity": 1,
+          "name": {
+            "en": "BLE PoE Gateway",
+            "he": "שער BLE"
+          }
+        }
+      ],
+      "features": [
+        {
+          "en": "Advanced reporting and analytics",
+          "he": "דוחות וניתוחים מתקדמים"
+        },
+        {
+          "en": "Integration with existing systems",
+          "he": "אינטגרציה עם מערכות קיימות"
+        },
+        {
+          "en": "Priority technical support",
+          "he": "תמיכה טכנית עדיפות"
+        },
+        {
+          "en": "Custom alert thresholds",
+          "he": "ספי התראה מותאמים אישית"
+        }
+      ],
+      "idealFor": {
+        "en": "Medium businesses, server rooms 20-50m²",
+        "he": "עסקים בינוניים, חדרי שרתים 20-50 מ\"ר"
+      }
+    },
+    {
+      "id": "enterprise",
+      "name": {
+        "en": "Enterprise Package",
+        "he": "חבילה ארגונית"
+      },
+      "description": {
+        "en": "Custom solution for large data centers and multiple server rooms",
+        "he": "פתרון מותאם אישית למרכזי נתונים גדולים ומספר חדרי שרתים"
+      },
+      "components": [
+        {
+          "item": "custom",
+          "quantity": "unlimited",
+          "name": {
+            "en": "Unlimited sensors (custom configuration)",
+            "he": "חיישנים ללא הגבלה (הגדרה מותאמת אישית)"
+          }
+        },
+        {
+          "item": "multiple-gateways",
+          "quantity": "multiple",
+          "name": {
+            "en": "Multiple BLE PoE Gateways",
+            "he": "מספר שערי BLE"
+          }
+        }
+      ],
+      "features": [
+        {
+          "en": "24/7 technical support",
+          "he": "תמיכה טכנית 24/7"
+        },
+        {
+          "en": "On-site training and implementation",
+          "he": "הדרכה והטמעה באתר"
+        },
+        {
+          "en": "Custom integrations and APIs",
+          "he": "אינטגרציות ו-APIs מותאמים אישית"
+        },
+        {
+          "en": "Dedicated account manager",
+          "he": "מנהל חשבון ייעודי"
+        },
+        {
+          "en": "SLA guarantees",
+          "he": "הבטחות SLA"
+        }
+      ],
+      "idealFor": {
+        "en": "Large enterprises, data centers, multiple locations",
+        "he": "ארגונים גדולים, מרכזי נתונים, מספר מיקומים"
+      }
+    }
+  ],
+  "benefits": [
+    {
+      "id": "cost-savings",
+      "title": {
+        "en": "Cost Savings",
+        "he": "חיסכון בעלויות"
+      },
+      "description": {
+        "en": "Prevent expensive equipment damage and downtime",
+        "he": "מניעת נזקים יקרים לציוד והשבתות"
+      },
+      "icon": "DollarSign",
+      "stats": {
+        "value": "80%",
+        "description": {
+          "en": "Reduction in maintenance costs",
+          "he": "הפחתה בעלויות תחזוקה"
+        }
+      }
+    },
+    {
+      "id": "reliability",
+      "title": {
+        "en": "High Reliability",
+        "he": "אמינות גבוהה"
+      },
+      "description": {
+        "en": "99.9% uptime with 5-year battery life",
+        "he": "99.9% זמינות עם חיי סוללה של 5 שנים"
+      },
+      "icon": "Shield",
+      "stats": {
+        "value": "99.9%",
+        "description": {
+          "en": "System uptime guarantee",
+          "he": "הבטחת זמינות המערכת"
+        }
+      }
+    },
+    {
+      "id": "early-detection",
+      "title": {
+        "en": "Early Detection",
+        "he": "זיהוי מוקדם"
+      },
+      "description": {
+        "en": "Identify problems before they cause damage",
+        "he": "זיהוי בעיות לפני שהן גורמות נזק"
+      },
+      "icon": "AlertTriangle",
+      "stats": {
+        "value": "95%",
+        "description": {
+          "en": "Reduction in environmental failures",
+          "he": "הפחתה בתקלות סביבתיות"
+        }
+      }
+    },
+    {
+      "id": "easy-setup",
+      "title": {
+        "en": "Easy Setup",
+        "he": "התקנה קלה"
+      },
+      "description": {
+        "en": "Installation and configuration in under 30 minutes",
+        "he": "התקנה והגדרה תוך פחות מ-30 דקות"
+      },
+      "icon": "Zap",
+      "stats": {
+        "value": "<30min",
+        "description": {
+          "en": "Setup time",
+          "he": "זמן התקנה"
+        }
+      }
+    }
+  ],
+  "applications": [
+    {
+      "id": "data-centers",
+      "title": {
+        "en": "Data Centers",
+        "he": "מרכזי נתונים"
+      },
+      "description": {
+        "en": "Large-scale server infrastructure monitoring",
+        "he": "ניטור תשתית שרתים בקנה מידה גדול"
+      },
+      "icon": "Server"
+    },
+    {
+      "id": "office-server-rooms",
+      "title": {
+        "en": "Office Server Rooms",
+        "he": "חדרי שרתים במשרדים"
+      },
+      "description": {
+        "en": "Small to medium business server monitoring",
+        "he": "ניטור שרתים לעסקים קטנים ובינוניים"
+      },
+      "icon": "Building"
+    },
+    {
+      "id": "educational-institutions",
+      "title": {
+        "en": "Educational Institutions",
+        "he": "מוסדות חינוך"
+      },
+      "description": {
+        "en": "Universities and schools IT infrastructure",
+        "he": "תשתית IT באוניברסיטאות ובתי ספר"
+      },
+      "icon": "GraduationCap"
+    },
+    {
+      "id": "healthcare",
+      "title": {
+        "en": "Healthcare Facilities",
+        "he": "מוסדות רפואיים"
+      },
+      "description": {
+        "en": "Hospitals and clinics server protection",
+        "he": "הגנה על שרתים בבתי חולים וקליניקות"
+      },
+      "icon": "Heart"
+    },
+    {
+      "id": "government",
+      "title": {
+        "en": "Government Agencies",
+        "he": "גופים ממשלתיים"
+      },
+      "description": {
+        "en": "Secure government IT infrastructure monitoring",
+        "he": "ניטור מאובטח של תשתית IT ממשלתית"
+      },
+      "icon": "Shield"
+    }
+  ]
+}
