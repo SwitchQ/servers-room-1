@@ -18,8 +18,9 @@ export default function HomePage() {
               <img
                 src="/images/logos/logo.svg"
                 alt="SwitchQ Logo"
-                className="h-10 w-auto ml-2"
+                className="h-14 w-auto ml-2"
               />
+              <h2 className="text-3xl text-primary-500">SwitchQ</h2>
             </div>
             <nav className="hidden md:flex items-center space-x-8">
               <a
@@ -54,16 +55,25 @@ export default function HomePage() {
             <div className="flex items-center space-x-4">
               <a
                 href="https://wa.me/972765991386"
-                 target="_blank"
+                target="_blank"
                 className="hidden sm:block text-primary-500 hover:text-primary-600 font-medium transition-colors"
               >
                 <span className="inline-flex items-center gap-2 mx-2 me-6">
-                  <img src="/images/icons/whatsapp-color.svg" alt="WhatsApp" width={32} height={32} className="inline-block align-middle" />
+                  <img
+                    src="/images/icons/whatsapp-color.svg"
+                    alt="WhatsApp"
+                    width={32}
+                    height={32}
+                    className="inline-block align-middle"
+                  />
                 </span>
               </a>
-              <button className="btn-cta shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+              <a
+                href="#contact"
+                className="btn-cta shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+              >
                 קבל הצעת מחיר
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -109,19 +119,27 @@ export default function HomePage() {
                 </span>
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
-                <button className="bg-gradient-to-r from-primary-500 to-secondary-500 text-white text-xl px-10 py-5 rounded-2xl font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-                  🎯 קבל הצעת מחיר חינם
-                </button>
-                <button className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white text-xl px-10 py-5 rounded-2xl font-semibold hover:bg-white/20 transition-all duration-300">
+                <a
+                  href="#contact"
+                  className="bg-gradient-to-r from-primary-500 to-secondary-500 text-white text-xl px-10 py-5 rounded-2xl font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+                >
+                  🎯 קבל הצעת מחיר
+                </a>
+                <a
+                  href="#products"
+                  className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white text-xl px-10 py-5 rounded-2xl font-semibold hover:bg-white/20 transition-all duration-300"
+                >
                   📖 למד עוד על הפתרון
-                </button>
+                </a>
               </div>
 
               {/* Stats */}
               <div className="grid grid-cols-3 gap-8 pt-8 border-t border-white/20 max-w-2xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary-400">5+</div>
-                  <div className="text-sm text-gray-300">שנות פעולה</div>
+                  <div className="text-3xl font-bold text-primary-400">
+                    100%
+                  </div>
+                  <div className="text-sm text-gray-300">הגנה חכמה</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-secondary-400">
@@ -130,8 +148,8 @@ export default function HomePage() {
                   <div className="text-sm text-gray-300">ניטור רציף</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary-400">30</div>
-                  <div className="text-sm text-gray-300">דקות התקנה</div>
+                  <div className="text-3xl font-bold text-primary-400">0</div>
+                  <div className="text-sm text-gray-300">דאגות על הראש</div>
                 </div>
               </div>
             </div>
@@ -148,112 +166,111 @@ export default function HomePage() {
         <div className="container-custom relative">
           <div className="text-center mb-20">
             <div className="inline-flex items-center px-4 py-2 bg-secondary-100 text-secondary-700 rounded-full text-sm font-medium mb-6">
-              🔧 טכנולוגיית Efento המתקדמת
+              🔧 טכנולוגיית IoT מתקדמת
             </div>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               המוצרים שלנו
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              חיישנים מתקדמים וגייטוויי לניטור מקיף של חדר השרתים עם טכנולוגיה
-              אלחוטית מתקדמת
+              מערכת חיישנים מתקדמת לניטור מקיף של חדר השרתים עם טכנולוגיה
+              אלחוטית
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="group bg-white rounded-2xl p-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
+            <div className="group bg-white rounded-2xl pb-0 pb-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 to-secondary-500"></div>
               <div className="relative">
-                <div className="w-40 h-40 mx-auto mb-6 bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                <div className="w-142 h-142 mx-auto mb-6 bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
                   <img
                     src="/images/products/temperature-humidity-on-wall.png"
                     alt="חיישן טמפרטורה ולחות"
-                    className="w-32 h-32 object-contain"
+                    className="w-142 h-142 object-contain"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 text-center px-8">
                   חיישן טמפרטורה ולחות
                 </h3>
-                <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  ניטור מדויק של טמפרטורה ולחות עם דיוק של ±0.1°C ודיווח כל 15
-                  דקות
+                <p className="text-gray-600 mb-6 text-center leading-relaxed px-8">
+                  ניטור מדויק של טמפרטורה ולחות עם דיוק של ±0.1°C למניעת התחממות
+                  יתר
                 </p>
                 <div className="flex justify-center">
-                  <span className="inline-flex items-center px-4 py-2 bg-primary-100 text-primary-800 rounded-full text-sm font-semibold">
-                    🔋 5 שנות סוללה
+                  <span className="inline-flex items-center px-4 py-2 bg-primary-100 text-primary-800 rounded-full text-sm font-semibold px-8">
+                    🌡️ הגנה מהתחממות
                   </span>
                 </div>
               </div>
             </div>
 
-            <div className="group bg-white rounded-2xl p-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
+            <div className="group bg-white rounded-2xl pb-0 pb-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-cyan-500"></div>
               <div className="relative">
-                <div className="w-40 h-40 mx-auto mb-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                <div className="w-124 h-124 mx-auto mb-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
                   <img
                     src="/images/products/leak-on-wall.png"
-                    alt="חיישן דליפת מים"
-                    className="w-32 h-32 object-contain"
+                    alt="חיישן הצפה"
+                    className="w-124 h-124 object-contain"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
-                  חיישן דליפת מים
+                <h3 className="text-xl font-bold text-gray-900 mb-3 text-center px-8">
+                  חיישן הצפה
                 </h3>
-                <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  זיהוי מיידי של דליפות מים ולחות יתר בחדר השרתים עם התראה
-                  מיידית
+                <p className="text-gray-600 mb-6 text-center leading-relaxed px-8">
+                  זיהוי מיידי של דליפות מים והצפה בחדר השרתים למניעת נזק כבד
                 </p>
                 <div className="flex justify-center">
-                  <span className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">
-                    ⚡ התראה מיידית
+                  <span className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold px-8">
+                    ⚡ זיהוי מיידי
                   </span>
                 </div>
               </div>
             </div>
 
-            <div className="group bg-white rounded-2xl p-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
+            <div className="group bg-white rounded-2xl p-0 pb-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-red-500"></div>
               <div className="relative">
-                <div className="w-40 h-40 mx-auto mb-6 bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                <div className="w-124 h-124 mx-auto mb-6 bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
                   <img
                     src="/images/products/pir-on-wall.png"
-                    alt="חיישן תנועה וגישה"
-                    className="w-32 h-32 object-contain"
+                    alt="גלאי תנועה וגישה"
+                    className="w-124 h-124 object-contain"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
-                  חיישן תנועה וגישה
+                <h3 className="text-xl font-bold text-gray-900 mb-3 text-center px-8">
+                  גלאי תנועה וגישה
                 </h3>
-                <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                  מעקב אחר גישה לא מורשית וזיהוי תנועה בחדר השרתים עם טכנולוגיית
+                <p className="text-gray-600 mb-6 text-center leading-relaxed px-8">
+                  זיהוי תנועה בחדר השרתים למעקב אחר גישה לא מורשית עם טכנולוגיית
                   PIR
                 </p>
                 <div className="flex justify-center">
-                  <span className="inline-flex items-center px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-semibold">
-                    🛡️ אבטחה מתקדמת
+                  <span className="inline-flex items-center px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-semibold px-8">
+                    🛡️ בקרת גישה
                   </span>
                 </div>
               </div>
             </div>
 
-            <div className="group bg-white rounded-2xl p-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
+            <div className="group bg-white rounded-2xl p-0 pb-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-emerald-500"></div>
               <div className="relative">
-                <div className="w-40 h-40 mx-auto mb-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                <div className="w-124 h-124 mx-auto mb-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
                   <img
                     src="/images/products/gateway-on-wall.png"
-                    alt="גייטוויי BLE PoE"
-                    className="w-32 h-32 object-contain"
+                    alt="מרכזיית BLE PoE"
+                    className="w-124 h-124 object-contain"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
-                  גייטוויי BLE PoE
+                <h3 className="text-xl font-bold text-gray-900 mb-3 text-center px-8">
+                  מרכזיית BLE PoE
                 </h3>
-                <p className="text-gray-600 mb-6 text-center leading-relaxed">
+                <p className="text-gray-600 mb-6 text-center leading-relaxed px-8">
                   מרכז הבקרה המחבר את כל החיישנים לרשת האינטרנט עם הזנת PoE
                   מובנית
                 </p>
                 <div className="flex justify-center">
-                  <span className="inline-flex items-center px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold">
+                  <span className="inline-flex items-center px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold px-8">
                     🌐 PoE מובנה
                   </span>
                 </div>
@@ -676,15 +693,20 @@ export default function HomePage() {
                 rel="noopener noreferrer"
                 className="group bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xl px-10 py-5 rounded-2xl font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3"
               >
-                <span className="text-2xl">📱</span>
-                WhatsApp: +972-76-599-1386
+                {/* <span className="text-2xl">📱</span> */}
+                <img
+                  src="/images/icons/whatsapp-border.svg"
+                  alt="WhatsApp"
+                  className="inline-block w-6 h-6 me-2"
+                />
+                WhatsApp
               </a>
               <a
-                href="mailto:contact@switchq.co.il"
+                href="mailto:sales@switchq.co.il"
                 className="group bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white text-xl px-10 py-5 rounded-2xl font-semibold hover:bg-white/20 transition-all duration-300 flex items-center gap-3"
               >
                 <span className="text-2xl">✉️</span>
-                contact@switchq.co.il
+                sales@switchq.co.il
               </a>
             </div>
           </div>
@@ -732,18 +754,24 @@ export default function HomePage() {
             <p className="text-gray-400 mb-6">
               פתרונות IoT מתקדמים לניטור חדרי שרתים
             </p>
-            <div className="flex justify-center items-center space-x-6">
+            <div className="flex justify-center items-center">
               <a
                 href="tel:+972765991386"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-white transition-colors me-6"
               >
-                +972-76-599-1386
+                <img
+                  src="/images/icons/whatsapp-color.svg"
+                  alt="WhatsApp"
+                  className="inline-block w-6 h-6 me-2"
+                />
+                WhatsApp
               </a>
               <a
-                href="mailto:contact@switchq.co.il"
+                href="mailto:sales@switchq.co.il"
                 className="text-gray-400 hover:text-white transition-colors"
               >
-                contact@switchq.co.il
+                <span className="inline-block w-6 h-6 me-2 text-2xl">✉️</span>
+                sales@switchq.co.il
               </a>
             </div>
             <div className="mt-8 pt-8 border-t border-gray-800 text-gray-500 text-sm">
