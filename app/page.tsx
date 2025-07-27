@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import ContactForm from "./components/forms/ContactForm";
 
 export const metadata: Metadata = {
   title: "SwitchQ - הגנה חכמה על חדרי השרתים שלכם",
@@ -23,7 +24,7 @@ export default function HomePage() {
             <nav className="hidden md:flex items-center space-x-8">
               <a
                 href="#products"
-                className="text-gray-700 hover:text-primary-500 transition-all duration-300 font-medium relative group"
+                className="text-gray-700 hover:text-primary-500 transition-all duration-300 font-medium relative group me-8"
               >
                 מוצרים
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
@@ -52,10 +53,13 @@ export default function HomePage() {
             </nav>
             <div className="flex items-center space-x-4">
               <a
-                href="tel:+972765991386"
+                href="https://wa.me/972765991386"
+                 target="_blank"
                 className="hidden sm:block text-primary-500 hover:text-primary-600 font-medium transition-colors"
               >
-                +972-76-599-1386
+                <span className="inline-flex items-center gap-2 mx-2 me-6">
+                  <img src="/images/icons/whatsapp-color.svg" alt="WhatsApp" width={32} height={32} className="inline-block align-middle" />
+                </span>
               </a>
               <button className="btn-cta shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
                 קבל הצעת מחיר
@@ -632,7 +636,7 @@ export default function HomePage() {
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-secondary-400 to-primary-400 rounded-full blur-3xl opacity-20 translate-y-48 -translate-x-48"></div>
 
         <div className="container-custom relative">
-          <div className="text-center max-w-4xl mx-auto">
+          <div className="text-center max-w-4xl mx-auto mb-16">
             <div className="inline-flex items-center px-4 py-2 bg-white/10 text-white rounded-full text-sm font-medium mb-6 backdrop-blur-sm">
               🚀 מוכנים להתחיל?
             </div>
@@ -646,8 +650,26 @@ export default function HomePage() {
                 התקנה מקצועית תוך 48 שעות!
               </span>
             </p>
+          </div>
 
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+          {/* Contact Form */}
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 lg:p-12 border border-white/20">
+              <div className="text-center mb-8">
+                <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
+                  שלחו לנו הודעה
+                </h3>
+                <p className="text-gray-300">
+                  מלאו את הפרטים ונחזור אליכם תוך 30 דקות בשעות העבודה
+                </p>
+              </div>
+              <ContactForm />
+            </div>
+          </div>
+
+          {/* Quick Contact Options */}
+          <div className="text-center mb-16">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <a
                 href="https://wa.me/972765991386"
                 target="_blank"
@@ -665,38 +687,38 @@ export default function HomePage() {
                 contact@switchq.co.il
               </a>
             </div>
+          </div>
 
-            {/* Contact Features */}
-            <div className="grid md:grid-cols-3 gap-8 mt-16">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">⚡</span>
-                </div>
-                <h4 className="text-lg font-semibold text-white mb-2">
-                  תגובה מהירה
-                </h4>
-                <p className="text-gray-300">מענה תוך 30 דקות בשעות העבודה</p>
+          {/* Contact Features */}
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">⚡</span>
               </div>
+              <h4 className="text-lg font-semibold text-white mb-2">
+                תגובה מהירה
+              </h4>
+              <p className="text-gray-300">מענה תוך 30 דקות בשעות העבודה</p>
+            </div>
 
-              <div className="text-center">
-                <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🎯</span>
-                </div>
-                <h4 className="text-lg font-semibold text-white mb-2">
-                  ייעוץ מקצועי
-                </h4>
-                <p className="text-gray-300">הערכת צרכים חינם ללא התחייבות</p>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🎯</span>
               </div>
+              <h4 className="text-lg font-semibold text-white mb-2">
+                ייעוץ מקצועי
+              </h4>
+              <p className="text-gray-300">הערכת צרכים חינם ללא התחייבות</p>
+            </div>
 
-              <div className="text-center">
-                <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🛠️</span>
-                </div>
-                <h4 className="text-lg font-semibold text-white mb-2">
-                  התקנה מהירה
-                </h4>
-                <p className="text-gray-300">התקנה מקצועית תוך 48 שעות</p>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🛠️</span>
               </div>
+              <h4 className="text-lg font-semibold text-white mb-2">
+                התקנה מהירה
+              </h4>
+              <p className="text-gray-300">התקנה מקצועית תוך 48 שעות</p>
             </div>
           </div>
         </div>
