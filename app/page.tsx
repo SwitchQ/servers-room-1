@@ -18,9 +18,11 @@ export default function HomePage() {
               <img
                 src="/images/logos/logo.svg"
                 alt="SwitchQ Logo"
-                className="h-14 w-auto ml-2"
+                className="h-10 md:h-14 w-auto ml-2"
               />
-              <h2 className="text-3xl text-primary-500">SwitchQ</h2>
+              <h2 className="hidden md:block text-3xl text-primary-500 ms-2">
+                SwitchQ
+              </h2>
             </div>
             <nav className="hidden md:flex items-center space-x-8">
               <a
@@ -80,7 +82,7 @@ export default function HomePage() {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 relative overflow-hidden min-h-screen flex items-center">
+      <section className="pt-28 pb-20 relative overflow-hidden min-h-screen flex items-center">
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -101,6 +103,7 @@ export default function HomePage() {
         <div className="container-custom relative z-10">
           <div className="flex items-center justify-center min-h-[60vh]">
             <div className="text-center animate-fade-in-up max-w-5xl mx-auto">
+              <h2 className="md:hidden text-white pb-4 text-5xl">SwitchQ</h2>
               <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-medium mb-6 drop-shadow-lg">
                 🚀 פתרון IoT מתקדם לחדרי שרתים
               </div>
@@ -120,16 +123,16 @@ export default function HomePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
                 <a
-                  href="#contact"
-                  className="bg-gradient-to-r from-primary-500 to-secondary-500 text-white text-xl px-10 py-5 rounded-2xl font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
-                >
-                  🎯 קבל הצעת מחיר
-                </a>
-                <a
                   href="#products"
                   className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white text-xl px-10 py-5 rounded-2xl font-semibold hover:bg-white/20 transition-all duration-300"
                 >
                   📖 למד עוד על הפתרון
+                </a>
+                <a
+                  href="#contact"
+                  className="bg-gradient-to-r from-primary-500 to-secondary-500 text-white text-xl px-10 py-5 rounded-2xl font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+                >
+                  🎯 קבל הצעת מחיר
                 </a>
               </div>
 
