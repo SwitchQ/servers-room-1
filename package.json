@@ -23,6 +23,8 @@
   "license": "ISC",
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
+    "@mdi/js": "^7.4.47",
+    "@mdi/react": "^1.6.1",
     "@types/node": "^22.10.5",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",

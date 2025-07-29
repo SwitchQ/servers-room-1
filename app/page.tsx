@@ -4,7 +4,7 @@ import ContactForm from "./components/forms/ContactForm";
 export const metadata: Metadata = {
   title: "SwitchQ - הגנה חכמה על חדרי השרתים שלכם",
   description:
-    "פתרון IoT מתקדם לניטור ובקרה של תנאי הסביבה בחדרי שרתים - טמפרטורה, לחות, דליפות מים וגישה לא מורשית",
+    "פתרון IoT מתקדם לניטור ובקרה של תנאי הסביבה בחדרי שרתים - טמפרטורה, לחות, זיהוי הצפה וגישה לא מורשית",
 };
 
 export default function HomePage() {
@@ -95,7 +95,8 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-black/60"></div>
 
         {/* Additional dark overlay for extra contrast */}
-        <div className="absolute inset-0 bg-black/40"></div>
+        {/* <div className="absolute inset-0 bg-white/10"></div> */}
+        <div className="absolute inset-0 bg-black/30"></div>
 
         {/* Background Pattern */}
         <div className="absolute inset-0 bg-pattern-dots opacity-20"></div>
@@ -115,10 +116,11 @@ export default function HomePage() {
                 <span className="drop-shadow-2xl">על חדרי השרתים שלכם</span>
               </h1>
               <p className="text-xl lg:text-2xl text-gray-100 leading-relaxed mb-10 max-w-4xl mx-auto drop-shadow-lg">
-                פתרון IoT מתקדם לניטור ובקרה של תנאי הסביבה בחדרי שרתים -
+                פתרון IoT מתקדם לניטור ובקרה של תנאי הסביבה בחדרי שרתים
+                <br />
                 <span className="font-semibold text-white">
                   {" "}
-                  טמפרטורה, לחות, דליפות מים וגישה לא מורשית
+                  טמפרטורה, לחות, זיהוי הצפה וגישה לא מורשית
                 </span>
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
@@ -139,20 +141,20 @@ export default function HomePage() {
               {/* Stats */}
               <div className="grid grid-cols-3 gap-8 pt-8 border-t border-white/20 max-w-2xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary-400">
-                    100%
-                  </div>
-                  <div className="text-sm text-gray-300">הגנה חכמה</div>
+                  <div className="text-4xl font-bold text-primary-400">5</div>
+                  <div className="text-md text-gray-300">חיישנים מתקדמים</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-secondary-400">
+                  <div className="text-4xl font-bold text-secondary-400">
                     24/7
                   </div>
-                  <div className="text-sm text-gray-300">ניטור רציף</div>
+                  <div className="text-md text-gray-300">ניטור רציף</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-primary-400">0</div>
-                  <div className="text-sm text-gray-300">דאגות על הראש</div>
+                  <div className="text-4xl font-bold text-primary-400">
+                    100%
+                  </div>
+                  <div className="text-md text-gray-300">הגנה חכמה</div>
                 </div>
               </div>
             </div>
@@ -180,8 +182,8 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="group bg-white rounded-2xl pb-0 pb-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+            <div className="group bg-white rounded-2xl pb-0 pb-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden flex flex-col justify-between">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 to-secondary-500"></div>
               <div className="relative">
                 <div className="w-142 h-142 mx-auto mb-6 bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
@@ -195,18 +197,17 @@ export default function HomePage() {
                   חיישן טמפרטורה ולחות
                 </h3>
                 <p className="text-gray-600 mb-6 text-center leading-relaxed px-8">
-                  ניטור מדויק של טמפרטורה ולחות עם דיוק של ±0.1°C למניעת התחממות
-                  יתר
+                  ניטור מדויק של טמפרטורה ולחות למניעת התחממות יתר
                 </p>
-                <div className="flex justify-center">
-                  <span className="inline-flex items-center px-4 py-2 bg-primary-100 text-primary-800 rounded-full text-sm font-semibold px-8">
-                    🌡️ הגנה מהתחממות
-                  </span>
-                </div>
+              </div>
+              <div className="flex justify-center">
+                <span className="inline-flex items-center px-4 py-2 bg-primary-100 text-primary-800 rounded-full text-sm font-semibold px-8">
+                  🌡️ הגנה מהתחממות
+                </span>
               </div>
             </div>
 
-            <div className="group bg-white rounded-2xl pb-0 pb-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
+            <div className="group bg-white rounded-2xl pb-0 pb-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden flex flex-col justify-between">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-cyan-500"></div>
               <div className="relative">
                 <div className="w-124 h-124 mx-auto mb-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
@@ -222,11 +223,36 @@ export default function HomePage() {
                 <p className="text-gray-600 mb-6 text-center leading-relaxed px-8">
                   זיהוי מיידי של דליפות מים והצפה בחדר השרתים למניעת נזק כבד
                 </p>
-                <div className="flex justify-center">
-                  <span className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold px-8">
-                    ⚡ זיהוי מיידי
-                  </span>
+              </div>
+              <div className="flex justify-center">
+                <span className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold px-8">
+                  ⚡ זיהוי מיידי
+                </span>
+              </div>
+            </div>
+
+            <div className="group bg-white rounded-2xl p-0 pb-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden flex flex-col justify-between">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-red-500"></div>
+              <div className="relative">
+                <div className="w-124 h-124 mx-auto mb-6 bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                  <img
+                    src="/images/products/pir-on-wall.png"
+                    alt="גלאי תנועה"
+                    className="w-124 h-124 object-contain"
+                  />
                 </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 text-center px-8">
+                  גלאי תנועה
+                </h3>
+                <p className="text-gray-600 mb-6 text-center leading-relaxed px-8 ">
+                  זיהוי תנועה בחדר השרתים למעקב אחר גישה לא מורשית עם טכנולוגיית
+                  PIR
+                </p>
+              </div>
+              <div className="flex justify-center">
+                <span className="inline-flex items-center px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-semibold px-8">
+                  🛡️ בקרת גישה
+                </span>
               </div>
             </div>
 
@@ -235,27 +261,26 @@ export default function HomePage() {
               <div className="relative">
                 <div className="w-124 h-124 mx-auto mb-6 bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
                   <img
-                    src="/images/products/pir-on-wall.png"
-                    alt="גלאי תנועה וגישה"
+                    src="/images/products/power-consumption.png"
+                    alt="חיישן צריכת חשמל"
                     className="w-124 h-124 object-contain"
                   />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 text-center px-8">
-                  גלאי תנועה וגישה
+                  חיישן צריכת חשמל
                 </h3>
                 <p className="text-gray-600 mb-6 text-center leading-relaxed px-8">
-                  זיהוי תנועה בחדר השרתים למעקב אחר גישה לא מורשית עם טכנולוגיית
-                  PIR
+                  ניטור צריכת החשמל של המערכות בחדר השרתים למניעת עומסים חשמליים
                 </p>
                 <div className="flex justify-center">
-                  <span className="inline-flex items-center px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-semibold px-8">
-                    🛡️ בקרת גישה
+                  <span className="inline-flex items-center px-4 py-2 bg-amber-100 text-amber-800 rounded-full text-sm font-semibold px-8">
+                    🔌 מניעת עומסים
                   </span>
                 </div>
               </div>
             </div>
 
-            <div className="group bg-white rounded-2xl p-0 pb-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
+            <div className="group bg-white rounded-2xl p-0 pb-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden flex flex-col justify-between">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-emerald-500"></div>
               <div className="relative">
                 <div className="w-124 h-124 mx-auto mb-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
@@ -272,20 +297,30 @@ export default function HomePage() {
                   מרכז הבקרה המחבר את כל החיישנים לרשת האינטרנט עם הזנת PoE
                   מובנית
                 </p>
-                <div className="flex justify-center">
-                  <span className="inline-flex items-center px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold px-8">
-                    🌐 PoE מובנה
-                  </span>
-                </div>
+              </div>
+              <div className="flex justify-center">
+                <span className="inline-flex items-center px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold px-8">
+                  🌐 PoE מובנה
+                </span>
               </div>
             </div>
+          </div>
+
+          <div className="mt-20 text-center">
+            <a
+              href="https://www.switchq.co.il/"
+              target="_blank"
+              className="bg-gradient-to-r from-primary-500 to-secondary-500 text-white text-xl px-10 py-5 rounded-2xl font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+            >
+              למוצרים נוספים
+            </a>
           </div>
 
           {/* Product Features */}
           <div className="mt-20 bg-white rounded-3xl p-12 shadow-soft border border-gray-100">
             <div className="text-center mb-12">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                מפרט טכני מתקדם
+                יתרונות טכנולוגיים
               </h3>
               <p className="text-lg text-gray-600">
                 כל המוצרים שלנו מגיעים עם המפרט הטכני הגבוה ביותר בשוק
@@ -298,10 +333,10 @@ export default function HomePage() {
                   <span className="text-2xl">📡</span>
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                  טכנולוגיית BLE 5.0
+                  מערכת אוטומציות
                 </h4>
                 <p className="text-gray-600">
-                  חיבור אלחוטי מתקדם עם טווח של עד 100 מטר
+                  מערכת לשליטה, ניהול ובקרה אוטומטית
                 </p>
               </div>
 
@@ -310,10 +345,10 @@ export default function HomePage() {
                   <span className="text-2xl">🔒</span>
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                  הצפנה מתקדמת
+                  מערכת התראות מתקדמת
                 </h4>
                 <p className="text-gray-600">
-                  הגנה מלאה על הנתונים עם הצפנת AES-256
+                  התראות בהתאמה אישית לפי זמנים ותנאים מתקדמים
                 </p>
               </div>
 
@@ -348,54 +383,87 @@ export default function HomePage() {
               איך זה עובד?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              תהליך התקנה פשוט ומהיר להגנה מלאה על חדר השרתים שלכם תוך 3 שלבים
-              בלבד
+              מערכת מתקדמת לניטור ובקרה של חדרי שרתים
             </p>
           </div>
 
-          {/* Step 1 */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
-            <div className="text-center lg:text-right">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 text-white rounded-2xl text-2xl font-bold mb-6 lg:mr-0 mx-auto">
-                1
+          {/* Flow Diagram: Sensor -> Gateway -> Cloud -> Application */}
+          <div className="flex flex-col items-center justify-center mb-24">
+            <div className="flex flex-col lg:flex-row items-center gap-8">
+              {/* Sensor */}
+              <div className="flex flex-col items-center">
+                <div className="w-36 h-36 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-2xl flex items-center justify-center mb-4">
+                  <img
+                    src="/images/products/temperature-humidity-on-wall.png"
+                    alt="חיישן"
+                    className="w-36 h-36 rounded-2xl"
+                  />
+                </div>
+                <span className="text-lg font-semibold text-gray-900">
+                  חיישן
+                </span>
               </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">
-                התקנה קלה ומהירה
-              </h3>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                התקנה מקצועית תוך פחות מ-30 דקות. החיישנים מותקנים על הקירות ללא
-                צורך בכבלים או עבודות חשמל מורכבות.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-center justify-end lg:justify-end justify-center">
-                  <span className="text-lg font-medium text-gray-700">
-                    התקנה ללא כבלים
-                  </span>
-                  <div className="w-3 h-3 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full mr-4"></div>
+              {/* Arrow */}
+              <span className="hidden md:block text-3xl text-primary-500 mx-2 lg:mx-4">
+                ←
+              </span>
+              <span className="block md:hidden text-3xl text-primary-500 mx-2 lg:mx-4">
+                ↓
+              </span>
+              {/* Gateway */}
+              <div className="flex flex-col items-center">
+                <div className="w-36 h-36 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-4">
+                  <img
+                    src="/images/products/gateway-on-wall.png"
+                    alt="מרכזיית BLE PoE"
+                    className="w-36 h-36 rounded-2xl"
+                  />
                 </div>
-                <div className="flex items-center justify-end lg:justify-end justify-center">
-                  <span className="text-lg font-medium text-gray-700">
-                    הגדרה אוטומטית
-                  </span>
-                  <div className="w-3 h-3 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full mr-4"></div>
+                <span className="text-lg font-semibold text-gray-900">
+                  מרכזיית BLE PoE
+                </span>
+              </div>
+              {/* Arrow */}
+              <span className="hidden md:block text-3xl text-primary-500 mx-2 lg:mx-4">
+                ←
+              </span>
+              <span className="block md:hidden text-3xl text-primary-500 mx-2 lg:mx-4">
+                ↓
+              </span>
+              {/* Cloud */}
+              <div className="flex flex-col items-center">
+                <div className="w-36 h-36 bg-gradient-to-br from-indigo-500 to-violet-500 rounded-2xl flex items-center justify-center mb-4">
+                  <span className="text-6xl">☁️</span>
                 </div>
-                <div className="flex items-center justify-end lg:justify-end justify-center">
-                  <span className="text-lg font-medium text-gray-700">
-                    בדיקת מערכת מלאה
-                  </span>
-                  <div className="w-3 h-3 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full mr-4"></div>
+                <span className="text-lg font-semibold text-gray-900">
+                  ענן מאובטח
+                </span>
+              </div>
+              {/* Arrow */}
+              <span className="hidden md:block text-3xl text-primary-500 mx-2 lg:mx-4">
+                ←
+              </span>
+              <span className="block md:hidden text-3xl text-primary-500 mx-2 lg:mx-4">
+                ↓
+              </span>
+              {/* Application */}
+              <div className="flex flex-col items-center">
+                <div className="w-36 h-36 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-4">
+                  <img
+                    src="/images/backgrounds/application.jpg"
+                    alt="אפליקציה"
+                    className="w-36 h-36 rounded-2xl"
+                  />
                 </div>
+                <span className="text-lg font-semibold text-gray-900">
+                  אפליקציה ודשבורד
+                </span>
               </div>
             </div>
-            <div className="flex justify-center lg:justify-start">
-              <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-r from-primary-200 to-secondary-200 rounded-3xl blur opacity-60"></div>
-                <img
-                  src="/images/backgrounds/installation-process.png"
-                  alt="תהליך התקנת החיישנים"
-                  className="relative w-full max-w-lg h-auto rounded-2xl shadow-2xl border-4 border-white"
-                />
-              </div>
+            <div className="mt-8 text-center text-gray-600 text-lg max-w-2xl mx-auto">
+              כל החיישנים שולחים נתונים למרכזיית IoT, שמעבירה אותם לענן מאובטח.
+              <br />
+              הנתונים זמינים באפליקציה ובדשבורד בזמן אמת.
             </div>
           </div>
 
@@ -419,27 +487,27 @@ export default function HomePage() {
                 התראות מיידיות
               </h3>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                קבלת התראות מיידיות בכל אמצעי התקשורת - WhatsApp, SMS, אימייל
-                ואפליקציה ניידת בזמן אמת.
+                קבלת התראות מיידיות ישירות מהאפליקציה, ב-SMS, ובאימייל, עם מערכת
+                הגדרות מתקדמת להתאמה אישית.
               </p>
               <div className="space-y-4">
-                <div className="flex items-center justify-end lg:justify-end justify-center">
+                <div className="flex items-center justify-start lg:justify-start justify-center">
+                  <div className="w-3 h-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full me-4"></div>
                   <span className="text-lg font-medium text-gray-700">
-                    התראות WhatsApp
+                    התראות אפליקציה
                   </span>
-                  <div className="w-3 h-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mr-4"></div>
                 </div>
-                <div className="flex items-center justify-end lg:justify-end justify-center">
+                <div className="flex items-center justify-start lg:justify-start justify-center">
+                  <div className="w-3 h-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full me-4"></div>
                   <span className="text-lg font-medium text-gray-700">
-                    הודעות SMS
+                    התראות SMS
                   </span>
-                  <div className="w-3 h-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mr-4"></div>
                 </div>
-                <div className="flex items-center justify-end lg:justify-end justify-center">
+                <div className="flex items-center justify-start lg:justify-start justify-center">
+                  <div className="w-3 h-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full me-4"></div>
                   <span className="text-lg font-medium text-gray-700">
                     התראות אימייל
                   </span>
-                  <div className="w-3 h-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mr-4"></div>
                 </div>
               </div>
             </div>
@@ -553,8 +621,7 @@ export default function HomePage() {
                 התראות בזמן אמת
               </h3>
               <p className="text-gray-600 text-center leading-relaxed">
-                קבלת התראות מיידיות ב-WhatsApp, SMS, אימייל ואפליקציה ניידת תוך
-                שניות
+                קבלת התראות מיידיות מהאפליקציה, ב-SMS, ובאימייל תוך שניות
               </p>
             </div>
 
@@ -665,10 +732,10 @@ export default function HomePage() {
             </h2>
             <p className="text-xl text-gray-300 mb-12 leading-relaxed">
               צרו קשר עכשיו לקבלת ייעוץ חינם והצעת מחיר מותאמת אישית.
-              <br />
+              {/* <br />
               <span className="text-white font-semibold">
                 התקנה מקצועית תוך 48 שעות!
-              </span>
+              </span> */}
             </p>
           </div>
 
@@ -680,7 +747,7 @@ export default function HomePage() {
                   שלחו לנו הודעה
                 </h3>
                 <p className="text-gray-300">
-                  מלאו את הפרטים ונחזור אליכם תוך 30 דקות בשעות העבודה
+                  מלאו את הפרטים ותקבלו מענה תוך רגע!
                 </p>
               </div>
               <ContactForm />

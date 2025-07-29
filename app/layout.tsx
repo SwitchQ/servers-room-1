@@ -1,6 +1,10 @@
+"use client";
 import type { Metadata } from "next";
 import { Heebo } from "next/font/google";
 import "./globals.css";
+import { useEffect, useState } from "react";
+import Icon from "@mdi/react";
+import { mdiArrowUp } from "@mdi/js";
 
 const heebo = Heebo({
   subsets: ["hebrew", "latin"],
@@ -8,65 +12,27 @@ const heebo = Heebo({
   variable: "--font-heebo",
 });
 
-export const metadata: Metadata = {
-  title: "SwitchQ - הגנה חכמה על חדרי השרתים שלכם",
-  description:
-    "פתרון IoT מתקדם לניטור ובקרה של תנאי הסביבה בחדרי שרתים - טמפרטורה, לחות, דליפות מים וגישה לא מורשית",
-  keywords: [
-    "חדרי שרתים",
-    "ניטור חדר שרתים",
-    "חיישני IoT",
-    "מערכת ניטור טמפרטורה",
-    "אבטחת חדרי שרתים",
-    "דליפות מים בחדר שרתים",
-    "ניטור סביבתי",
-    "פתרונות IoT לעסקים",
-    "SwitchQ",
-    "Efento",
-  ],
-  authors: [{ name: "SwitchQ" }],
-  creator: "SwitchQ",
-  publisher: "SwitchQ",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL("https://switchq.co.il"),
-  alternates: {
-    canonical: "/",
-  },
-  openGraph: {
-    title: "SwitchQ - הגנה חכמה על חדרי השרתים שלכם",
-    description: "פתרון IoT מתקדם לניטור ובקרה של תנאי הסביבה בחדרי שרתים",
-    url: "https://switchq.co.il",
-    siteName: "SwitchQ",
-    locale: "he_IL",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "SwitchQ - הגנה חכמה על חדרי השרתים שלכם",
-    description: "פתרון IoT מתקדם לניטור ובקרה של תנאי הסביבה בחדרי שרתים",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-};
+// ...existing code...
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowButton(window.scrollY > 200);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <html lang="he" dir="rtl" className={`${heebo.variable}`}>
       <head>
@@ -84,6 +50,15 @@ export default function RootLayout({
       >
         <div id="root" className="min-h-screen">
           {children}
+          {showButton && (
+            <button
+              onClick={scrollToTop}
+              title="Go to top"
+              className="fixed bottom-10 right-10 z-50 bg-blue-400 hover:bg-blue-800 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg transition-colors duration-300"
+            >
+              <Icon path={mdiArrowUp} size={1.2} />
+            </button>
+          )}
         </div>
       </body>
     </html>
