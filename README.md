@@ -98,6 +98,11 @@ npm run export
    pm2 restart servers-room-1 || pm2 start npm --name "servers-room-1" -- start
    ```
 
+   **Or use the provided deployment script:**
+   ```bash
+   bash deploy.sh
+   ```
+
 3. **Alternative Start Methods**:
    - **Option A (Recommended)**: `npm start` (uses npx)
    - **Option B**: `npm run start:local` (uses local binary)

@@ -16,7 +16,7 @@ git pull origin main
 
 # Install dependencies
 echo "📦 Installing dependencies..."
-npm ci --production=false
+npm install
 
 # Build the application
 echo "🔨 Building application..."
