@@ -76,17 +76,81 @@ npm run export
 
 ## Deployment on Laravel Forge
 
-1. **Environment Variables**: Set up the following in Laravel Forge:
-   ```
+### Prerequisites
+1. **Node.js Version**: Ensure Node.js 18+ is installed on your server
+2. **PM2**: Install PM2 for process management: `npm install -g pm2`
+
+### Deployment Steps
+
+1. **Environment Variables**: Set up the following in Laravel Forge environment file:
+   ```bash
    ALLCHAT_API_TOKEN=1828114.l2pGf6nJDfHCI0mdquVkyW5kU9eaIosTjcRVEvYQSddf37E123
    ALLCHAT_API_URL=https://app.allchat.chat/api/contacts
+   NODE_ENV=production
    ```
 
-2. **Build Command**: Use `npm run build` (not `npm run export`)
+2. **Build Script**: In Laravel Forge, set your build script to:
+   ```bash
+   cd /home/forge/your-domain.com
+   git pull origin main
+   npm install
+   npm run build
+   pm2 restart servers-room-1 || pm2 start npm --name "servers-room-1" -- start
+   ```
 
-3. **Start Command**: Use `npm start`
+3. **Alternative Start Methods**:
+   - **Option A (Recommended)**: `npm start` (uses npx)
+   - **Option B**: `npm run start:local` (uses local binary)
+   - **Option C**: `npx next start`
+   - **Option D**: `./node_modules/.bin/next start`
 
-4. **Node.js Version**: Ensure Node.js 18+ is installed
+4. **Port Configuration**: 
+   - Default port: 3000
+   - Custom port: `PORT=3001 npm start`
+
+### Troubleshooting
+
+**If you get "next: not found" error:**
+
+1. **Check if dependencies are installed**:
+   ```bash
+   ls node_modules/.bin/next
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Use npx instead**:
+   ```bash
+   npx next start
+   ```
+
+4. **Check Node.js version**:
+   ```bash
+   node --version  # Should be 18+
+   npm --version
+   ```
+
+### PM2 Process Management (Recommended)
+
+1. **Start with PM2**:
+   ```bash
+   pm2 start npm --name "servers-room-1" -- start
+   ```
+
+2. **Save PM2 configuration**:
+   ```bash
+   pm2 save
+   pm2 startup
+   ```
+
+3. **Monitor processes**:
+   ```bash
+   pm2 status
+   pm2 logs servers-room-1
+   ```
 
 ## API Endpoints
 
