@@ -56,7 +56,7 @@ export default function HomePage() {
             </nav>
             <div className="flex items-center space-x-4">
               <a
-                href="https://wa.me/972765991386"
+                href="https://wa.me/972765991386?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%9E%D7%95%D7%93%D7%A2%D7%94%20%D7%A9%D7%9C%D7%9B%D7%9D%20%D7%A2%D7%9C%20%D7%A0%D7%99%D7%98%D7%95%D7%A8%20%D7%97%D7%93%D7%A8%20%D7%A9%D7%A8%D7%AA%D7%99%D7%9D%0A%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93"
                 target="_blank"
                 className="hidden sm:block text-primary-500 hover:text-primary-600 font-medium transition-colors"
               >
@@ -490,11 +490,17 @@ export default function HomePage() {
                 קבלת התראות מיידיות ישירות מהאפליקציה, ב-SMS, ובאימייל, עם מערכת
                 הגדרות מתקדמת להתאמה אישית.
               </p>
-              <div className="space-y-4">
+              <div className="space-y-3">
                 <div className="flex items-center justify-start lg:justify-start justify-center">
                   <div className="w-3 h-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full me-4"></div>
                   <span className="text-lg font-medium text-gray-700">
                     התראות אפליקציה
+                  </span>
+                </div>
+                <div className="flex items-center justify-start lg:justify-start justify-center">
+                  <div className="w-3 h-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full me-4"></div>
+                  <span className="text-lg font-medium text-gray-700">
+                    התראות WhatsApp
                   </span>
                 </div>
                 <div className="flex items-center justify-start lg:justify-start justify-center">
@@ -507,6 +513,18 @@ export default function HomePage() {
                   <div className="w-3 h-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full me-4"></div>
                   <span className="text-lg font-medium text-gray-700">
                     התראות אימייל
+                  </span>
+                </div>
+                <div className="flex items-center justify-start lg:justify-start justify-center">
+                  <div className="w-3 h-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full me-4"></div>
+                  <span className="text-lg font-medium text-gray-700">
+                    התראות לפי זמנים
+                  </span>
+                </div>
+                <div className="flex items-center justify-start lg:justify-start justify-center">
+                  <div className="w-3 h-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full me-4"></div>
+                  <span className="text-lg font-medium text-gray-700">
+                    התראות חוזרות
                   </span>
                 </div>
               </div>
@@ -621,7 +639,8 @@ export default function HomePage() {
                 התראות בזמן אמת
               </h3>
               <p className="text-gray-600 text-center leading-relaxed">
-                קבלת התראות מיידיות מהאפליקציה, ב-SMS, ובאימייל תוך שניות
+                קבלת התראות מיידיות מהאפליקציה, ב-WhatsApp, ב-SMS, ובאימייל תוך
+                שניות
               </p>
             </div>
 
@@ -758,10 +777,10 @@ export default function HomePage() {
           <div className="text-center mb-16">
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <a
-                href="https://wa.me/972765991386"
+                href="https://wa.me/972765991386?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%9E%D7%95%D7%93%D7%A2%D7%94%20%D7%A9%D7%9C%D7%9B%D7%9D%20%D7%A2%D7%9C%20%D7%A0%D7%99%D7%98%D7%95%D7%A8%20%D7%97%D7%93%D7%A8%20%D7%A9%D7%A8%D7%AA%D7%99%D7%9D%0A%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xl px-10 py-5 rounded-2xl font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3"
+                className="w-56 flex justify-center group bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xl px-10 py-5 rounded-2xl font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3"
               >
                 {/* <span className="text-2xl">📱</span> */}
                 <img
@@ -773,10 +792,10 @@ export default function HomePage() {
               </a>
               <a
                 href="mailto:sales@switchq.co.il"
-                className="group bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white text-xl px-10 py-5 rounded-2xl font-semibold hover:bg-white/20 transition-all duration-300 flex items-center gap-3"
+                className="w-56 flex justify-center group bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white text-xl px-10 py-5 rounded-2xl font-semibold hover:bg-white/20 transition-all duration-300 flex items-center gap-3"
               >
                 <span className="text-2xl">✉️</span>
-                sales@switchq.co.il
+                Email
               </a>
             </div>
           </div>

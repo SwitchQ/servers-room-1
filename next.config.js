@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Enable static export for deployment
-  output: "export",
+  // Conditional output based on environment
+  // For development and API routes, use default
+  // For production static export, use "export"
+  output: process.env.NEXT_OUTPUT === "export" ? "export" : undefined,
 
   // Disable image optimization for static export
   images: {
@@ -29,6 +31,12 @@ const nextConfig = {
     });
 
     return config;
+  },
+
+  // Environment variables for the API
+  env: {
+    ALLCHAT_API_TOKEN: process.env.ALLCHAT_API_TOKEN,
+    ALLCHAT_API_URL: process.env.ALLCHAT_API_URL,
   },
 };
 

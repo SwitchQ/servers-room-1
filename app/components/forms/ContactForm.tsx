@@ -7,23 +7,13 @@ import { z } from "zod";
 import { Send, CheckCircle, AlertCircle } from "lucide-react";
 import Button from "../ui/Button";
 import Input from "../ui/Input";
-import Textarea from "../ui/Textarea";
 
-// Zod validation schema
+// Zod validation schema - simplified to 3 fields only
 const contactFormSchema = z.object({
-  name: z
+  fullName: z
     .string()
     .min(2, "שם חייב להכיל לפחות 2 תווים")
-    .max(50, "שם לא יכול להכיל יותר מ-50 תווים")
-    .regex(
-      /^[א-ת\s\u0590-\u05FF\w\s]+$/,
-      "שם יכול להכיל רק אותיות עבריות, אנגליות ורווחים"
-    ),
-  email: z
-    .string()
-    .email("כתובת אימייל לא תקינה")
-    .min(5, "כתובת אימייל קצרה מדי")
-    .max(100, "כתובת אימייל ארוכה מדי"),
+    .max(50, "שם לא יכול להכיל יותר מ-50 תווים"),
   phone: z
     .string()
     .min(9, "מספר טלפון חייב להכיל לפחות 9 ספרות")
@@ -32,23 +22,20 @@ const contactFormSchema = z.object({
       /^[0-9+\-\s()]+$/,
       "מספר טלפון יכול להכיל רק ספרות, +, -, רווחים וסוגריים"
     ),
-  message: z
+  email: z
     .string()
-    .max(1000, "הודעה לא יכולה להכיל יותר מ-1000 תווים")
-    .optional(),
+    .email("כתובת אימייל לא תקינה")
+    .min(5, "כתובת אימייל קצרה מדי")
+    .max(100, "כתובת אימייל ארוכה מדי"),
 });
 
 type ContactFormData = z.infer<typeof contactFormSchema>;
 
 interface ContactFormProps {
-  onSubmit?: (data: ContactFormData) => Promise<void>;
   className?: string;
 }
 
-const ContactForm: React.FC<ContactFormProps> = ({
-  onSubmit,
-  className = "",
-}) => {
+const ContactForm: React.FC<ContactFormProps> = ({ className = "" }) => {
   const [submitStatus, setSubmitStatus] = useState<
     "idle" | "success" | "error"
   >("idle");
@@ -69,20 +56,32 @@ const ContactForm: React.FC<ContactFormProps> = ({
       setSubmitStatus("idle");
       setSubmitMessage("");
 
-      if (onSubmit) {
-        await onSubmit(data);
-      } else {
-        // Default behavior - simulate API call
-        await new Promise((resolve) => setTimeout(resolve, 2000));
-        console.log("Form data:", data);
-      }
+      // Send data to our API endpoint
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-      setSubmitStatus("success");
-      setSubmitMessage("הודעתך נשלחה בהצלחה! נחזור אליך בהקדם.");
-      reset();
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitStatus("success");
+        setSubmitMessage(result.message);
+        reset();
+      } else {
+        setSubmitStatus("error");
+        setSubmitMessage(
+          result.message || "אירעה שגיאה בשליחת ההודעה. אנא נסה שוב."
+        );
+      }
     } catch (error) {
       setSubmitStatus("error");
-      setSubmitMessage("אירעה שגיאה בשליחת ההודעה. אנא נסה שוב.");
+      setSubmitMessage(
+        "אירעה שגיאה בשליחת ההודעה. אנא נסה שוב או צור קשר ב-WhatsApp: 0765991386"
+      );
       console.error("Form submission error:", error);
     }
   };
@@ -90,13 +89,13 @@ const ContactForm: React.FC<ContactFormProps> = ({
   return (
     <div className={`w-full max-w-2xl mx-auto ${className}`}>
       <form onSubmit={handleSubmit(handleFormSubmit)} className="space-y-6">
-        {/* Name Field */}
+        {/* Full Name Field */}
         <Input
-          {...register("name")}
+          {...register("fullName")}
           type="text"
           label="שם מלא"
           placeholder="הכנס את שמך המלא"
-          error={errors.name?.message}
+          error={errors.fullName?.message}
           required
           disabled={isSubmitting}
         />
@@ -126,17 +125,6 @@ const ContactForm: React.FC<ContactFormProps> = ({
           dir="ltr"
           className="text-left"
         />
-
-        {/* Message Field */}
-        {/* <Textarea
-          {...register("message")}
-          label="הודעה (אופציונלי)"
-          placeholder="ספר לנו על הצרכים שלך, גודל חדר השרתים, סוג הציוד וכל מידע נוסף שיעזור לנו להכין עבורך הצעה מותאמת..."
-          rows={5}
-          error={errors.message?.message}
-          disabled={isSubmitting}
-          helperText="עד 1000 תווים"
-        /> */}
 
         {/* Submit Button */}
         <div className="flex flex-col items-center space-y-4">
@@ -168,7 +156,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
           )}
         </div>
 
-        {/* Contact Info */}
+        {/* Alternative Contact Info */}
         {/* <div className="text-center pt-6 border-t border-gray-200">
           <p className="text-sm text-gray-600 mb-2">או צור קשר ישירות:</p>
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-6 sm:space-x-reverse">
@@ -184,7 +172,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
               <span>WhatsApp: 0765991386</span>
             </a>
             <a
-              href="mailto:sales@switchq.co.il"
+              href="mailto:contact@switchq.co.il"
               className="flex items-center space-x-2 space-x-reverse text-purple-600 hover:text-purple-700 transition-colors"
             >
               <svg
@@ -200,7 +188,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
                   d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                 />
               </svg>
-              <span>sales@switchq.co.il</span>
+              <span>contact@switchq.co.il</span>
             </a>
           </div>
         </div> */}
