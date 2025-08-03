@@ -44,3 +44,5 @@ pm2 status servers-room-1
 
 echo "📝 Recent logs:"
 pm2 logs servers-room-1 --lines 10
+
+echo "✅ End of deployment!"
