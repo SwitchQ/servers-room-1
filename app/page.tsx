@@ -456,7 +456,12 @@ export default function HomePage() {
               {/* Cloud */}
               <div className="flex flex-col items-center">
                 <div className="w-36 h-36 bg-gradient-to-br from-indigo-500 to-violet-500 rounded-3xl flex items-center justify-center mb-4">
-                  <span className="text-6xl">☁️</span>
+                  {/* <span className="text-6xl">☁️</span> */}
+                  <img
+                    src="/images/backgrounds/secured-cloud.png"
+                    alt="אפליקציה"
+                    className="w-36 h-36 rounded-3xl"
+                  />
                 </div>
                 <span className="text-lg font-semibold text-gray-900">
                   ענן מאובטח
