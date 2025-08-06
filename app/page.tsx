@@ -2,9 +2,9 @@ import { Metadata } from "next";
 import ContactForm from "./components/forms/ContactForm";
 
 export const metadata: Metadata = {
-  title: "SwitchQ - הגנה חכמה על חדרי השרתים שלכם",
+  title: "SwitchQ - הגנה חכמה על חדרי השרתים והתקשורת שלכם",
   description:
-    "פתרון IoT מתקדם לניטור ובקרה של תנאי הסביבה בחדרי שרתים - טמפרטורה, לחות, זיהוי הצפה וגישה לא מורשית",
+    "פתרון IoT מתקדם לניטור ובקרה של תנאי הסביבה בחדרי שרתים ותקשורת - טמפרטורה, לחות, זיהוי הצפה וגישה לא מורשית",
 };
 
 export default function HomePage() {
@@ -106,17 +106,19 @@ export default function HomePage() {
             <div className="text-center animate-fade-in-up max-w-5xl mx-auto">
               <h2 className="md:hidden text-white pb-4 text-5xl">SwitchQ</h2>
               <div className="inline-flex items-center px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-medium mb-6 drop-shadow-lg">
-                🚀 פתרון IoT מתקדם לחדרי שרתים
+                🚀 פתרון IoT מתקדם לחדרי שרתים ותקשורת
               </div>
               <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight mb-6 drop-shadow-2xl">
                 <span className="bg-gradient-to-r from-primary-300 to-secondary-300 bg-clip-text text-transparent drop-shadow-lg">
                   הגנה חכמה
                 </span>
                 <br />
-                <span className="drop-shadow-2xl">על חדרי השרתים שלכם</span>
+                <span className="drop-shadow-2xl">
+                  על חדרי השרתים והתקשורת שלכם
+                </span>
               </h1>
               <p className="text-xl lg:text-2xl text-gray-100 leading-relaxed mb-10 max-w-4xl mx-auto drop-shadow-lg">
-                פתרון IoT מתקדם לניטור ובקרה של תנאי הסביבה בחדרי שרתים
+                פתרון IoT מתקדם לניטור ובקרה של תנאי הסביבה בחדרי שרתים ותקשורת
                 <br />
                 <span className="font-semibold text-white">
                   {" "}
@@ -126,13 +128,13 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
                 <a
                   href="#products"
-                  className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white text-xl px-10 py-5 rounded-2xl font-semibold hover:bg-white/20 transition-all duration-300"
+                  className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white text-xl px-10 py-5 rounded-3xl font-semibold hover:bg-white/20 transition-all duration-300"
                 >
                   📖 למד עוד על הפתרון
                 </a>
                 <a
                   href="#contact"
-                  className="bg-gradient-to-r from-primary-500 to-secondary-500 text-white text-xl px-10 py-5 rounded-2xl font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+                  className="bg-gradient-to-r from-primary-500 to-secondary-500 text-white text-xl px-10 py-5 rounded-3xl font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
                 >
                   🎯 קבל הצעת מחיר
                 </a>
@@ -142,19 +144,40 @@ export default function HomePage() {
               <div className="grid grid-cols-3 gap-8 pt-8 border-t border-white/20 max-w-2xl mx-auto">
                 <div className="text-center">
                   <div className="text-4xl font-bold text-primary-400">5</div>
-                  <div className="text-md text-gray-300">חיישנים מתקדמים</div>
+                  <div className="text-md text-gray-300">
+                    <div className="flex justify-center text-center align-center">
+                      חיישנים
+                      <br className="md:hidden" />
+                      <span className="hidden md:flex">&nbsp;</span>
+                      מתקדמים
+                    </div>
+                  </div>
                 </div>
                 <div className="text-center">
                   <div className="text-4xl font-bold text-secondary-400">
                     24/7
                   </div>
-                  <div className="text-md text-gray-300">ניטור רציף</div>
+                  <div className="text-md text-gray-300">
+                    <div className="flex justify-center text-center align-center">
+                      ניטור
+                      <br className="md:hidden" />
+                      <span className="hidden md:flex">&nbsp;</span>
+                      רציף
+                    </div>
+                  </div>
                 </div>
                 <div className="text-center">
                   <div className="text-4xl font-bold text-primary-400">
                     100%
                   </div>
-                  <div className="text-md text-gray-300">הגנה חכמה</div>
+                  <div className="text-md text-gray-300">
+                    <div className="flex justify-center text-center align-center">
+                      הגנה
+                      <br className="md:hidden" />
+                      <span className="hidden md:flex">&nbsp;</span>
+                      חכמה
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -177,16 +200,16 @@ export default function HomePage() {
               המוצרים שלנו
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              מערכת חיישנים מתקדמת לניטור מקיף של חדר השרתים עם טכנולוגיה
-              אלחוטית
+              מערכת חיישנים מתקדמת לניטור מקיף של חדרי השרתים והתקשורת עם
+              טכנולוגיה אלחוטית
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
-            <div className="group bg-white rounded-2xl pb-0 pb-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden flex flex-col justify-between">
+            <div className="group bg-white rounded-3xl pb-0 pb-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden flex flex-col justify-between">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 to-secondary-500"></div>
               <div className="relative">
-                <div className="w-142 h-142 mx-auto mb-6 bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                <div className="w-142 h-142 mx-auto mb-6 bg-gradient-to-br from-primary-50 to-secondary-50 rounded-3xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
                   <img
                     src="/images/products/temperature-humidity-on-wall.png"
                     alt="חיישן טמפרטורה ולחות"
@@ -207,10 +230,10 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="group bg-white rounded-2xl pb-0 pb-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden flex flex-col justify-between">
+            <div className="group bg-white rounded-3xl pb-0 pb-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden flex flex-col justify-between">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-cyan-500"></div>
               <div className="relative">
-                <div className="w-124 h-124 mx-auto mb-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                <div className="w-124 h-124 mx-auto mb-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
                   <img
                     src="/images/products/leak-on-wall.png"
                     alt="חיישן הצפה"
@@ -231,10 +254,10 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="group bg-white rounded-2xl p-0 pb-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden flex flex-col justify-between">
+            <div className="group bg-white rounded-3xl p-0 pb-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden flex flex-col justify-between">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-red-500"></div>
               <div className="relative">
-                <div className="w-124 h-124 mx-auto mb-6 bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                <div className="w-124 h-124 mx-auto mb-6 bg-gradient-to-br from-orange-50 to-red-50 rounded-3xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
                   <img
                     src="/images/products/pir-on-wall.png"
                     alt="גלאי תנועה"
@@ -256,10 +279,10 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="group bg-white rounded-2xl p-0 pb-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
+            <div className="group bg-white rounded-3xl p-0 pb-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-red-500"></div>
               <div className="relative">
-                <div className="w-124 h-124 mx-auto mb-6 bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                <div className="w-124 h-124 mx-auto mb-6 bg-gradient-to-br from-orange-50 to-red-50 rounded-3xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
                   <img
                     src="/images/products/power-consumption.png"
                     alt="חיישן צריכת חשמל"
@@ -280,10 +303,10 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="group bg-white rounded-2xl p-0 pb-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden flex flex-col justify-between">
+            <div className="group bg-white rounded-3xl p-0 pb-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden flex flex-col justify-between">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-emerald-500"></div>
               <div className="relative">
-                <div className="w-124 h-124 mx-auto mb-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                <div className="w-124 h-124 mx-auto mb-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
                   <img
                     src="/images/products/gateway-on-wall.png"
                     alt="מרכזיית BLE PoE"
@@ -310,14 +333,14 @@ export default function HomePage() {
             <a
               href="https://www.switchq.co.il/"
               target="_blank"
-              className="bg-gradient-to-r from-primary-500 to-secondary-500 text-white text-xl px-10 py-5 rounded-2xl font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+              className="bg-gradient-to-r from-primary-500 to-secondary-500 text-white text-xl px-10 py-5 rounded-3xl font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
             >
               למוצרים נוספים
             </a>
           </div>
 
           {/* Product Features */}
-          <div className="mt-20 bg-white rounded-3xl p-12 shadow-soft border border-gray-100">
+          <div className="mt-20 bg-gradient-to-br from-primary-50 to-secondary-50 rounded-3xl p-12 border border-primary-100">
             <div className="text-center mb-12">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">
                 יתרונות טכנולוגיים
@@ -329,7 +352,7 @@ export default function HomePage() {
 
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-3xl flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">📡</span>
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
@@ -341,7 +364,7 @@ export default function HomePage() {
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-3xl flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">🔒</span>
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
@@ -353,7 +376,7 @@ export default function HomePage() {
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-3xl flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">☁️</span>
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
@@ -383,7 +406,7 @@ export default function HomePage() {
               איך זה עובד?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              מערכת מתקדמת לניטור ובקרה של חדרי שרתים
+              מערכת מתקדמת לניטור ובקרה של חדרי שרתים ותקשורת
             </p>
           </div>
 
@@ -392,11 +415,11 @@ export default function HomePage() {
             <div className="flex flex-col lg:flex-row items-center gap-8">
               {/* Sensor */}
               <div className="flex flex-col items-center">
-                <div className="w-36 h-36 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-2xl flex items-center justify-center mb-4">
+                <div className="w-36 h-36 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-3xl flex items-center justify-center mb-4">
                   <img
                     src="/images/products/temperature-humidity-on-wall.png"
                     alt="חיישן"
-                    className="w-36 h-36 rounded-2xl"
+                    className="w-36 h-36 rounded-3xl"
                   />
                 </div>
                 <span className="text-lg font-semibold text-gray-900">
@@ -412,11 +435,11 @@ export default function HomePage() {
               </span>
               {/* Gateway */}
               <div className="flex flex-col items-center">
-                <div className="w-36 h-36 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-4">
+                <div className="w-36 h-36 bg-gradient-to-br from-green-500 to-emerald-500 rounded-3xl flex items-center justify-center mb-4">
                   <img
                     src="/images/products/gateway-on-wall.png"
                     alt="מרכזיית BLE PoE"
-                    className="w-36 h-36 rounded-2xl"
+                    className="w-36 h-36 rounded-3xl"
                   />
                 </div>
                 <span className="text-lg font-semibold text-gray-900">
@@ -432,7 +455,7 @@ export default function HomePage() {
               </span>
               {/* Cloud */}
               <div className="flex flex-col items-center">
-                <div className="w-36 h-36 bg-gradient-to-br from-indigo-500 to-violet-500 rounded-2xl flex items-center justify-center mb-4">
+                <div className="w-36 h-36 bg-gradient-to-br from-indigo-500 to-violet-500 rounded-3xl flex items-center justify-center mb-4">
                   <span className="text-6xl">☁️</span>
                 </div>
                 <span className="text-lg font-semibold text-gray-900">
@@ -448,11 +471,11 @@ export default function HomePage() {
               </span>
               {/* Application */}
               <div className="flex flex-col items-center">
-                <div className="w-36 h-36 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-4">
+                <div className="w-36 h-36 bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl flex items-center justify-center mb-4">
                   <img
                     src="/images/backgrounds/application.jpg"
                     alt="אפליקציה"
-                    className="w-36 h-36 rounded-2xl"
+                    className="w-36 h-36 rounded-3xl"
                   />
                 </div>
                 <span className="text-lg font-semibold text-gray-900">
@@ -475,14 +498,14 @@ export default function HomePage() {
                 <img
                   src="/images/backgrounds/alert-notifications.png"
                   alt="התראות בזמן אמת"
-                  className="relative w-full max-w-lg h-auto rounded-2xl shadow-2xl border-4 border-white"
+                  className="relative w-full max-w-lg h-auto rounded-3xl shadow-2xl border-4 border-white"
                 />
               </div>
             </div>
             <div className="text-center lg:text-right order-1 lg:order-2">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 text-white rounded-2xl text-2xl font-bold mb-6 lg:mr-0 mx-auto">
+              {/* <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 text-white rounded-3xl text-2xl font-bold mb-6 lg:mr-0 mx-auto">
                 2
-              </div>
+              </div> */}
               <h3 className="text-3xl font-bold text-gray-900 mb-6">
                 התראות מיידיות
               </h3>
@@ -533,9 +556,9 @@ export default function HomePage() {
 
           {/* Step 3 */}
           <div className="text-center">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 text-white rounded-2xl text-2xl font-bold mb-6 mx-auto">
+            {/* <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 text-white rounded-3xl text-2xl font-bold mb-6 mx-auto">
               3
-            </div>
+            </div> */}
             <h3 className="text-3xl font-bold text-gray-900 mb-6">
               ניטור רציף ובקרה מלאה
             </h3>
@@ -547,7 +570,7 @@ export default function HomePage() {
             <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-12 shadow-soft border border-white/50">
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <div className="w-20 h-20 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-3xl flex items-center justify-center mx-auto mb-4">
                     <span className="text-3xl">📊</span>
                   </div>
                   <h4 className="text-xl font-semibold text-gray-900 mb-3">
@@ -559,7 +582,7 @@ export default function HomePage() {
                 </div>
 
                 <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-3xl flex items-center justify-center mx-auto mb-4">
                     <span className="text-3xl">📈</span>
                   </div>
                   <h4 className="text-xl font-semibold text-gray-900 mb-3">
@@ -571,7 +594,7 @@ export default function HomePage() {
                 </div>
 
                 <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-3xl flex items-center justify-center mx-auto mb-4">
                     <span className="text-3xl">🔧</span>
                   </div>
                   <h4 className="text-xl font-semibold text-gray-900 mb-3">
@@ -602,15 +625,15 @@ export default function HomePage() {
               למה לבחור בפתרון של SwitchQ?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              פתרון מקיף לניטור חדרי שרתים עם טכנולוגיית Efento המתקדמת והתמיכה
-              הטובה ביותר בישראל
+              פתרון מקיף לניטור חדרי שרתים ותקשורת עם הטכנולוגייה הכי המתקדמת
+              והתמיכה הטובה ביותר בישראל
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="group bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
+            <div className="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-cyan-500"></div>
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <img
                   src="/images/icons/monitoring-24-7.svg"
                   alt="ניטור 24/7"
@@ -626,9 +649,9 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="group bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
+            <div className="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 to-orange-500"></div>
-              <div className="w-20 h-20 bg-gradient-to-br from-red-100 to-orange-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-20 h-20 bg-gradient-to-br from-red-100 to-orange-100 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <img
                   src="/images/icons/real-time-alerts.svg"
                   alt="התראות בזמן אמת"
@@ -644,9 +667,9 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="group bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
+            <div className="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-emerald-500"></div>
-              <div className="w-20 h-20 bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-20 h-20 bg-gradient-to-br from-green-100 to-emerald-100 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <img
                   src="/images/icons/battery-life.svg"
                   alt="5 שנות פעולה"
@@ -661,9 +684,9 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="group bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
+            <div className="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500"></div>
-              <div className="w-20 h-20 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-20 h-20 bg-gradient-to-br from-purple-100 to-pink-100 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <img
                   src="/images/icons/easy-setup.svg"
                   alt="התקנה קלה"
@@ -671,10 +694,10 @@ export default function HomePage() {
                 />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
-                התקנה קלה
+                תפעול
               </h3>
               <p className="text-gray-600 text-center leading-relaxed">
-                התקנה והגדרה תוך פחות מ-30 דקות ללא צורך בכבלים או עבודות חשמל
+                האפליקציה הכי מתקדמת בישראל עם ממשק משתמש אינטואיטיבי
               </p>
             </div>
           </div>
@@ -693,7 +716,7 @@ export default function HomePage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-3xl flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">💰</span>
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
@@ -705,7 +728,7 @@ export default function HomePage() {
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-3xl flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">🛡️</span>
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
@@ -717,7 +740,7 @@ export default function HomePage() {
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">🎯</span>
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
@@ -747,7 +770,7 @@ export default function HomePage() {
               🚀 מוכנים להתחיל?
             </div>
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              מוכנים להגן על חדר השרתים שלכם?
+              מוכנים להגן על חדרי השרתים והתקשורת שלכם?
             </h2>
             <p className="text-xl text-gray-300 mb-12 leading-relaxed">
               צרו קשר עכשיו לקבלת ייעוץ חינם והצעת מחיר מותאמת אישית.
@@ -780,7 +803,7 @@ export default function HomePage() {
                 href="https://wa.me/972765991386?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%9E%D7%95%D7%93%D7%A2%D7%94%20%D7%A9%D7%9C%D7%9B%D7%9D%20%D7%A2%D7%9C%20%D7%A0%D7%99%D7%98%D7%95%D7%A8%20%D7%97%D7%93%D7%A8%20%D7%A9%D7%A8%D7%AA%D7%99%D7%9D%0A%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-56 flex justify-center group bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xl px-10 py-5 rounded-2xl font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3"
+                className="w-56 flex justify-center group bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xl px-10 py-5 rounded-3xl font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3"
               >
                 {/* <span className="text-2xl">📱</span> */}
                 <img
@@ -792,7 +815,7 @@ export default function HomePage() {
               </a>
               <a
                 href="mailto:sales@switchq.co.il"
-                className="w-56 flex justify-center group bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white text-xl px-10 py-5 rounded-2xl font-semibold hover:bg-white/20 transition-all duration-300 flex items-center gap-3"
+                className="w-56 flex justify-center group bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white text-xl px-10 py-5 rounded-3xl font-semibold hover:bg-white/20 transition-all duration-300 flex items-center gap-3"
               >
                 <span className="text-2xl">✉️</span>
                 Email
@@ -803,7 +826,7 @@ export default function HomePage() {
           {/* Contact Features */}
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-3xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">⚡</span>
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">
@@ -813,7 +836,7 @@ export default function HomePage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-3xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🎯</span>
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">
@@ -823,7 +846,7 @@ export default function HomePage() {
             </div>
 
             <div className="text-center">
-              <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-3xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🛠️</span>
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">
@@ -841,7 +864,7 @@ export default function HomePage() {
           <div className="text-center">
             <h3 className="text-2xl font-bold text-gradient mb-4">SwitchQ</h3>
             <p className="text-gray-400 mb-6">
-              פתרונות IoT מתקדמים לניטור חדרי שרתים
+              פתרונות IoT מתקדמים לניטור חדרי שרתים ותקשורת
             </p>
             <div className="flex justify-center items-center">
               <a
