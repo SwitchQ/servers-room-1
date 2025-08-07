@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import ContactForm from "./components/forms/ContactForm";
 
 export default function HomePage() {
@@ -20,10 +21,13 @@ export default function HomePage() {
               onClick={scrollToTopAndResetUrl}
               className="flex items-center hover:opacity-80 transition-opacity duration-300 cursor-pointer focus:outline-none"
             >
-              <img
+              <Image
                 src="/images/logos/logo.svg"
                 alt="SwitchQ Logo"
+                width={56}
+                height={56}
                 className="h-10 md:h-14 w-auto ml-2"
+                priority
               />
               <h2 className="hidden md:block text-3xl text-primary-500 ms-2">
                 SwitchQ
@@ -66,7 +70,7 @@ export default function HomePage() {
                 className="hidden sm:block text-primary-500 hover:text-primary-600 font-medium transition-colors"
               >
                 <span className="inline-flex items-center gap-2 mx-2 me-6">
-                  <img
+                  <Image
                     src="/images/icons/whatsapp-color.svg"
                     alt="WhatsApp"
                     width={32}
@@ -215,9 +219,11 @@ export default function HomePage() {
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-500 to-secondary-500"></div>
               <div className="relative">
                 <div className="w-142 h-142 mx-auto mb-6 bg-gradient-to-br from-primary-50 to-secondary-50 rounded-3xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                  <img
+                  <Image
                     src="/images/products/temperature-humidity-on-wall.png"
                     alt="חיישן טמפרטורה ולחות"
+                    width={248}
+                    height={248}
                     className="w-142 h-142 object-contain"
                   />
                 </div>
@@ -239,9 +245,11 @@ export default function HomePage() {
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-cyan-500"></div>
               <div className="relative">
                 <div className="w-124 h-124 mx-auto mb-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                  <img
+                  <Image
                     src="/images/products/leak-on-wall.png"
                     alt="חיישן הצפה"
+                    width={248}
+                    height={248}
                     className="w-124 h-124 object-contain"
                   />
                 </div>
@@ -263,9 +271,11 @@ export default function HomePage() {
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-red-500"></div>
               <div className="relative">
                 <div className="w-124 h-124 mx-auto mb-6 bg-gradient-to-br from-orange-50 to-red-50 rounded-3xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                  <img
+                  <Image
                     src="/images/products/pir-on-wall.png"
                     alt="גלאי תנועה"
+                    width={248}
+                    height={248}
                     className="w-124 h-124 object-contain"
                   />
                 </div>
@@ -288,9 +298,11 @@ export default function HomePage() {
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-red-500"></div>
               <div className="relative">
                 <div className="w-124 h-124 mx-auto mb-6 bg-gradient-to-br from-orange-50 to-red-50 rounded-3xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                  <img
+                  <Image
                     src="/images/products/power-consumption.png"
                     alt="חיישן צריכת חשמל"
+                    width={248}
+                    height={248}
                     className="w-124 h-124 object-contain"
                   />
                 </div>
@@ -312,9 +324,11 @@ export default function HomePage() {
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-emerald-500"></div>
               <div className="relative">
                 <div className="w-124 h-124 mx-auto mb-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-                  <img
+                  <Image
                     src="/images/products/gateway-on-wall.png"
                     alt="מרכזיית IoT"
+                    width={248}
+                    height={248}
                     className="w-124 h-124 object-contain"
                   />
                 </div>
@@ -358,9 +372,11 @@ export default function HomePage() {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-4">
-                  <img
+                  <Image
                     src="/images/icons/automations_system.png"
                     alt="מערכת אוטומציות"
+                    width={96}
+                    height={96}
                     className="w-24 h-24 object-contain"
                   />
                 </div>
@@ -374,9 +390,11 @@ export default function HomePage() {
 
               <div className="text-center">
                 <div className="w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-4">
-                  <img
+                  <Image
                     src="/images/icons/notifications_system.png"
                     alt="מערכת התראות מתקדמת"
+                    width={96}
+                    height={96}
                     className="w-24 h-24 object-contain"
                   />
                 </div>
@@ -390,9 +408,11 @@ export default function HomePage() {
 
               <div className="text-center">
                 <div className="w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-4">
-                  <img
+                  <Image
                     src="/images/icons/secured_cloud_architecture.png"
                     alt="מערכת ענן מאובטחת"
+                    width={96}
+                    height={96}
                     className="w-24 h-24 object-contain"
                   />
                 </div>
@@ -433,9 +453,11 @@ export default function HomePage() {
               {/* Sensor */}
               <div className="flex flex-col items-center">
                 <div className="w-36 h-36 rounded-3xl flex items-center justify-center mb-4">
-                  <img
+                  <Image
                     src="/images/products/temperature-humidity-on-wall.png"
                     alt="חיישן"
+                    width={144}
+                    height={144}
                     className="w-36 h-36 rounded-3xl shadow-lg"
                   />
                 </div>
@@ -453,9 +475,11 @@ export default function HomePage() {
               {/* Gateway */}
               <div className="flex flex-col items-center">
                 <div className="w-36 h-36 rounded-3xl flex items-center justify-center mb-4">
-                  <img
+                  <Image
                     src="/images/products/gateway-on-wall.png"
                     alt="מרכזיית BLE PoE"
+                    width={144}
+                    height={144}
                     className="w-36 h-36 rounded-3xl shadow-lg"
                   />
                 </div>
@@ -473,9 +497,11 @@ export default function HomePage() {
               {/* Cloud */}
               <div className="flex flex-col items-center">
                 <div className="w-36 h-36 rounded-3xl flex items-center justify-center mb-4">
-                  <img
+                  <Image
                     src="/images/backgrounds/secured-cloud.png"
                     alt="אפליקציה"
+                    width={144}
+                    height={144}
                     className="w-36 h-36 rounded-3xl shadow-lg"
                   />
                 </div>
@@ -493,9 +519,11 @@ export default function HomePage() {
               {/* Application */}
               <div className="flex flex-col items-center">
                 <div className="w-36 h-36 rounded-3xl flex items-center justify-center mb-4">
-                  <img
+                  <Image
                     src="/images/backgrounds/application.jpg"
                     alt="אפליקציה"
+                    width={144}
+                    height={144}
                     className="w-36 h-36 rounded-3xl shadow-lg"
                   />
                 </div>
@@ -516,9 +544,11 @@ export default function HomePage() {
             <div className="flex justify-center lg:justify-end order-2 lg:order-1">
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-200 to-purple-200 rounded-3xl blur opacity-60"></div>
-                <img
+                <Image
                   src="/images/backgrounds/alert-notifications.png"
                   alt="התראות בזמן אמת"
+                  width={600}
+                  height={400}
                   className="relative w-full max-w-lg h-auto rounded-3xl shadow-2xl border-4 border-white"
                 />
               </div>
@@ -590,9 +620,11 @@ export default function HomePage() {
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="text-center">
                   <div className="w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-4">
-                    <img
+                    <Image
                       src="/images/icons/advanced_dashboard.png"
                       alt="דשבורד מתקדם"
+                      width={96}
+                      height={96}
                       className="w-24 h-24 object-contain"
                     />
                   </div>
@@ -606,9 +638,11 @@ export default function HomePage() {
 
                 <div className="text-center">
                   <div className="w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-4">
-                    <img
+                    <Image
                       src="/images/icons/detailed_reports.png"
                       alt="דוחות מפורטים"
+                      width={96}
+                      height={96}
                       className="w-24 h-24 object-contain"
                     />
                   </div>
@@ -622,9 +656,11 @@ export default function HomePage() {
 
                 <div className="text-center">
                   <div className="w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-4">
-                    <img
+                    <Image
                       src="/images/icons/remote_control.png"
                       alt="בקרה מרחוק"
+                      width={96}
+                      height={96}
                       className="w-24 h-24 object-contain"
                     />
                   </div>
@@ -669,9 +705,11 @@ export default function HomePage() {
             <div className="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-cyan-500"></div>
               <div className="w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-4">
-                <img
+                <Image
                   src="/images/icons/save_money.png"
                   alt="חיסכון בעלויות"
+                  width={96}
+                  height={96}
                   className="w-24 h-24 object-contain"
                 />
               </div>
@@ -687,9 +725,11 @@ export default function HomePage() {
             <div className="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-cyan-500"></div>
               <div className="w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-4">
-                <img
+                <Image
                   src="/images/icons/protected.png"
                   alt="אמינות גבוהה"
+                  width={96}
+                  height={96}
                   className="w-24 h-24 object-contain"
                 />
               </div>
@@ -705,9 +745,11 @@ export default function HomePage() {
             <div className="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-red-500"></div>
               <div className="w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-4">
-                <img
+                <Image
                   src="/images/icons/support.png"
                   alt="תמיכה מקצועית"
+                  width={96}
+                  height={96}
                   className="w-24 h-24 object-contain"
                 />
               </div>
@@ -723,9 +765,11 @@ export default function HomePage() {
             <div className="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-yellow-500"></div>
               <div className="w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-4">
-                <img
+                <Image
                   src="/images/icons/touch_app.png"
                   alt="התקנה ותפעול פשוטים"
+                  width={96}
+                  height={96}
                   className="w-24 h-24 object-contain"
                 />
               </div>
@@ -737,61 +781,6 @@ export default function HomePage() {
               </p>
             </div>
           </div>
-
-          {/* Additional Benefits */}
-          {/* <div className="mt-20 bg-gradient-to-br from-primary-50 to-secondary-50 rounded-3xl p-12 border border-primary-100">
-            <div className="text-center mb-12">
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                יתרונות נוספים שיחסכו לכם כסף
-              </h3>
-              <p className="text-lg text-gray-600">
-                הפתרון שלנו לא רק מגן על הציוד - הוא גם חוסך עלויות תפעול
-                משמעותיות
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-4">
-                  <img
-                    src="/images/icons/save_money.png"
-                    alt="חיסכון בעלויות"
-                    className="w-24 h-24 object-contain"
-                  />
-                </div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                  חיסכון בעלויות
-                </h4>
-                <p className="text-gray-600">
-                  מניעת נזקים יקרים לציוד ושבירות בשירות
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-3xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🛡️</span>
-                </div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                  אמינות גבוהה
-                </h4>
-                <p className="text-gray-600">
-                  99.9% זמינות עם גיבוי כפול ומערכת failover
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🎯</span>
-                </div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                  תמיכה מקצועית
-                </h4>
-                <p className="text-gray-600">
-                  תמיכה טכנית 24/7 בעברית עם זמן תגובה מהיר
-                </p>
-              </div>
-            </div>
-          </div> */}
         </div>
       </section>
 
@@ -846,9 +835,11 @@ export default function HomePage() {
                 className="w-56 flex justify-center group bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xl px-10 py-5 rounded-3xl font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-3"
               >
                 {/* <span className="text-2xl">📱</span> */}
-                <img
+                <Image
                   src="/images/icons/whatsapp-border.svg"
                   alt="WhatsApp"
+                  width={24}
+                  height={24}
                   className="inline-block w-6 h-6 me-2"
                 />
                 WhatsApp
@@ -911,9 +902,11 @@ export default function HomePage() {
                 href="tel:+972765991386"
                 className="text-gray-400 hover:text-white transition-colors me-6"
               >
-                <img
+                <Image
                   src="/images/icons/whatsapp-color.svg"
                   alt="WhatsApp"
+                  width={24}
+                  height={24}
                   className="inline-block w-6 h-6 me-2"
                 />
                 WhatsApp
