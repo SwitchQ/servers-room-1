@@ -31,6 +31,10 @@ export default function RootLayout({
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+    // Reset URL to remove any hash fragments
+    if (window.location.hash) {
+      window.history.replaceState(null, "", window.location.pathname);
+    }
   };
 
   return (

@@ -29,8 +29,6 @@ export function useRecaptcha(options: UseRecaptchaOptions = {}): UseRecaptchaRet
             return;
         }
 
-        console.log('Loading reCAPTCHA with site key:', siteKey);
-
         if (isLoaded || isLoading) {
             return;
         }

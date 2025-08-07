@@ -52,15 +52,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = "" }) => {
     action: "contact_form",
   });
 
-  // Debug reCAPTCHA status
-  useEffect(() => {
-    console.log("reCAPTCHA status:", {
-      loaded: recaptchaLoaded,
-      error: recaptchaError,
-      siteKey: process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
-    });
-  }, [recaptchaLoaded, recaptchaError]);
-
   const {
     register,
     handleSubmit,
@@ -80,15 +71,10 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = "" }) => {
       let recaptchaToken: string | null = null;
       if (recaptchaLoaded) {
         try {
-          console.log("Attempting to execute reCAPTCHA...");
           recaptchaToken = await executeRecaptcha();
-          console.log("reCAPTCHA token generated:", recaptchaToken ? "✓" : "✗");
         } catch (error) {
-          console.warn("reCAPTCHA execution failed:", error);
           // Continue without reCAPTCHA token (graceful degradation)
         }
-      } else {
-        console.log("reCAPTCHA not loaded, skipping token generation");
       }
 
       // Prepare submission data with protection fields
@@ -98,11 +84,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = "" }) => {
         formStartTime,
         honeypot: "", // Empty honeypot field
       };
-
-      console.log("Submission data:", {
-        ...submissionData,
-        recaptchaToken: recaptchaToken ? "present" : "missing",
-      });
 
       // Send data to our API endpoint
       const response = await fetch("/api/contact", {
@@ -130,7 +111,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = "" }) => {
       setSubmitMessage(
         "אירעה שגיאה בשליחת ההודעה. אנא נסה שוב או צור קשר ב-WhatsApp: 0765991386"
       );
-      console.error("Form submission error:", error);
     }
   };
 

@@ -1,20 +1,25 @@
-import { Metadata } from "next";
+"use client";
 import ContactForm from "./components/forms/ContactForm";
 
-export const metadata: Metadata = {
-  title: "SwitchQ - הגנה חכמה על חדרי השרתים והתקשורת שלכם",
-  description:
-    "פתרון IoT מתקדם לניטור ובקרה של תנאי הסביבה בחדרי שרתים ותקשורת - טמפרטורה, לחות, זיהוי הצפה וגישה לא מורשית",
-};
-
 export default function HomePage() {
+  const scrollToTopAndResetUrl = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    // Reset URL to remove any hash fragments
+    if (window.location.hash) {
+      window.history.replaceState(null, "", window.location.pathname);
+    }
+  };
+
   return (
     <main className="min-h-screen bg-white">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-soft border-b border-gray-100">
         <div className="container-custom">
           <div className="flex items-center justify-between h-20">
-            <div className="flex items-center">
+            <button
+              onClick={scrollToTopAndResetUrl}
+              className="flex items-center hover:opacity-80 transition-opacity duration-300 cursor-pointer focus:outline-none"
+            >
               <img
                 src="/images/logos/logo.svg"
                 alt="SwitchQ Logo"
@@ -23,7 +28,7 @@ export default function HomePage() {
               <h2 className="hidden md:block text-3xl text-primary-500 ms-2">
                 SwitchQ
               </h2>
-            </div>
+            </button>
             <nav className="hidden md:flex items-center space-x-8">
               <a
                 href="#products"
@@ -113,9 +118,7 @@ export default function HomePage() {
                   הגנה חכמה
                 </span>
                 <br />
-                <span className="drop-shadow-2xl">
-                  על חדרי השרתים והתקשורת שלכם
-                </span>
+                <span className="drop-shadow-2xl">על חדרי שרתים ותקשורת</span>
               </h1>
               <p className="text-xl lg:text-2xl text-gray-100 leading-relaxed mb-10 max-w-4xl mx-auto drop-shadow-lg">
                 פתרון IoT מתקדם לניטור ובקרה של תנאי הסביבה בחדרי שרתים ותקשורת
