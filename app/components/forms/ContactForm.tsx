@@ -1,12 +1,13 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Send, CheckCircle, AlertCircle } from "lucide-react";
+import { Send, CheckCircle, AlertCircle, Shield } from "lucide-react";
 import Button from "../ui/Button";
 import Input from "../ui/Input";
+import { useRecaptcha } from "../../lib/hooks/useRecaptcha";
 
 // Zod validation schema - simplified to 3 fields only
 const contactFormSchema = z.object({
@@ -40,6 +41,25 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = "" }) => {
     "idle" | "success" | "error"
   >("idle");
   const [submitMessage, setSubmitMessage] = useState<string>("");
+  const [formStartTime] = useState<number>(Date.now());
+
+  // Initialize reCAPTCHA
+  const {
+    isLoaded: recaptchaLoaded,
+    executeRecaptcha,
+    error: recaptchaError,
+  } = useRecaptcha({
+    action: "contact_form",
+  });
+
+  // Debug reCAPTCHA status
+  useEffect(() => {
+    console.log("reCAPTCHA status:", {
+      loaded: recaptchaLoaded,
+      error: recaptchaError,
+      siteKey: process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
+    });
+  }, [recaptchaLoaded, recaptchaError]);
 
   const {
     register,
@@ -56,13 +76,41 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = "" }) => {
       setSubmitStatus("idle");
       setSubmitMessage("");
 
+      // Get reCAPTCHA token
+      let recaptchaToken: string | null = null;
+      if (recaptchaLoaded) {
+        try {
+          console.log("Attempting to execute reCAPTCHA...");
+          recaptchaToken = await executeRecaptcha();
+          console.log("reCAPTCHA token generated:", recaptchaToken ? "✓" : "✗");
+        } catch (error) {
+          console.warn("reCAPTCHA execution failed:", error);
+          // Continue without reCAPTCHA token (graceful degradation)
+        }
+      } else {
+        console.log("reCAPTCHA not loaded, skipping token generation");
+      }
+
+      // Prepare submission data with protection fields
+      const submissionData = {
+        ...data,
+        recaptchaToken,
+        formStartTime,
+        honeypot: "", // Empty honeypot field
+      };
+
+      console.log("Submission data:", {
+        ...submissionData,
+        recaptchaToken: recaptchaToken ? "present" : "missing",
+      });
+
       // Send data to our API endpoint
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(submissionData),
       });
 
       const result = await response.json();
@@ -125,6 +173,25 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = "" }) => {
           dir="ltr"
           className="text-left"
         />
+
+        {/* Honeypot field - hidden from users, visible to bots */}
+        <div className="hidden" aria-hidden="true">
+          <input
+            type="text"
+            name="website"
+            tabIndex={-1}
+            autoComplete="off"
+            style={{ position: "absolute", left: "-9999px" }}
+          />
+        </div>
+
+        {/* Security indicator */}
+        {recaptchaLoaded && (
+          <div className="flex items-center justify-center space-x-2 space-x-reverse text-sm text-gray-400">
+            <Shield className="w-4 h-4 text-green-300" />
+            <span>הטופס מוגן באמצעות reCAPTCHA</span>
+          </div>
+        )}
 
         {/* Submit Button */}
         <div className="flex flex-col items-center space-y-4">

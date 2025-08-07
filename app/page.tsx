@@ -249,7 +249,7 @@ export default function HomePage() {
               </div>
               <div className="flex justify-center">
                 <span className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold px-8">
-                  ⚡ זיהוי מיידי
+                  💦 הגנה ממים
                 </span>
               </div>
             </div>
@@ -268,7 +268,7 @@ export default function HomePage() {
                   גלאי תנועה
                 </h3>
                 <p className="text-gray-600 mb-6 text-center leading-relaxed px-8 ">
-                  זיהוי תנועה בחדר השרתים למעקב אחר גישה לא מורשית עם טכנולוגיית
+                  זיהוי תנועה בחדר השרתים למעקב אחר גישה לא מורשית עם עם חיישן
                   PIR
                 </p>
               </div>
@@ -309,21 +309,21 @@ export default function HomePage() {
                 <div className="w-124 h-124 mx-auto mb-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
                   <img
                     src="/images/products/gateway-on-wall.png"
-                    alt="מרכזיית BLE PoE"
+                    alt="מרכזיית IoT"
                     className="w-124 h-124 object-contain"
                   />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 text-center px-8">
-                  מרכזיית BLE PoE
+                  מרכזיית IoT
                 </h3>
                 <p className="text-gray-600 mb-6 text-center leading-relaxed px-8">
-                  מרכז הבקרה המחבר את כל החיישנים לרשת האינטרנט עם הזנת PoE
-                  מובנית
+                  מרכזיית תקשורת המחברת את כל החיישנים לרשת האינטרנט ולמערכת
+                  הענן
                 </p>
               </div>
               <div className="flex justify-center">
                 <span className="inline-flex items-center px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold px-8">
-                  🌐 PoE מובנה
+                  🌐 מרכז תקשורת
                 </span>
               </div>
             </div>
@@ -352,8 +352,12 @@ export default function HomePage() {
 
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-3xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">📡</span>
+                <div className="w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-4">
+                  <img
+                    src="/images/icons/automations_system.png"
+                    alt="מערכת אוטומציות"
+                    className="w-24 h-24 object-contain"
+                  />
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
                   מערכת אוטומציות
@@ -364,8 +368,12 @@ export default function HomePage() {
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-3xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🔒</span>
+                <div className="w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-4">
+                  <img
+                    src="/images/icons/notifications_system.png"
+                    alt="מערכת התראות מתקדמת"
+                    className="w-24 h-24 object-contain"
+                  />
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
                   מערכת התראות מתקדמת
@@ -376,8 +384,12 @@ export default function HomePage() {
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-3xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">☁️</span>
+                <div className="w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-4">
+                  <img
+                    src="/images/icons/secured_cloud_architecture.png"
+                    alt="מערכת ענן מאובטחת"
+                    className="w-24 h-24 object-contain"
+                  />
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
                   ענן מאובטח
@@ -443,7 +455,7 @@ export default function HomePage() {
                   />
                 </div>
                 <span className="text-lg font-semibold text-gray-900">
-                  מרכזיית BLE PoE
+                  מרכזיית IoT
                 </span>
               </div>
               {/* Arrow */}
@@ -456,7 +468,6 @@ export default function HomePage() {
               {/* Cloud */}
               <div className="flex flex-col items-center">
                 <div className="w-36 h-36 bg-gradient-to-br from-indigo-500 to-violet-500 rounded-3xl flex items-center justify-center mb-4">
-                  {/* <span className="text-6xl">☁️</span> */}
                   <img
                     src="/images/backgrounds/secured-cloud.png"
                     alt="אפליקציה"
@@ -508,15 +519,10 @@ export default function HomePage() {
               </div>
             </div>
             <div className="text-center lg:text-right order-1 lg:order-2">
-              {/* <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 text-white rounded-3xl text-2xl font-bold mb-6 lg:mr-0 mx-auto">
-                2
-              </div> */}
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">
-                התראות מיידיות
-              </h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">התראות</h3>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                קבלת התראות מיידיות ישירות מהאפליקציה, ב-SMS, ובאימייל, עם מערכת
-                הגדרות מתקדמת להתאמה אישית.
+                קבלת התראות בזמן אמת ישירות מהאפליקציה, ב-SMS, ובאימייל, עם
+                מערכת הגדרות מתקדמת להתאמה אישית.
               </p>
               <div className="space-y-3">
                 <div className="flex items-center justify-start lg:justify-start justify-center">
@@ -546,6 +552,12 @@ export default function HomePage() {
                 <div className="flex items-center justify-start lg:justify-start justify-center">
                   <div className="w-3 h-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full me-4"></div>
                   <span className="text-lg font-medium text-gray-700">
+                    VMS - שיחת טלפון אוטומטית
+                  </span>
+                </div>
+                <div className="flex items-center justify-start lg:justify-start justify-center">
+                  <div className="w-3 h-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full me-4"></div>
+                  <span className="text-lg font-medium text-gray-700">
                     התראות לפי זמנים
                   </span>
                 </div>
@@ -561,9 +573,6 @@ export default function HomePage() {
 
           {/* Step 3 */}
           <div className="text-center">
-            {/* <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 text-white rounded-3xl text-2xl font-bold mb-6 mx-auto">
-              3
-            </div> */}
             <h3 className="text-3xl font-bold text-gray-900 mb-6">
               ניטור רציף ובקרה מלאה
             </h3>
@@ -575,8 +584,12 @@ export default function HomePage() {
             <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-12 shadow-soft border border-white/50">
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-3xl flex items-center justify-center mx-auto mb-4">
-                    <span className="text-3xl">📊</span>
+                  <div className="w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-4">
+                    <img
+                      src="/images/icons/advanced_dashboard.png"
+                      alt="דשבורד מתקדם"
+                      className="w-24 h-24 object-contain"
+                    />
                   </div>
                   <h4 className="text-xl font-semibold text-gray-900 mb-3">
                     דשבורד מתקדם
@@ -587,8 +600,12 @@ export default function HomePage() {
                 </div>
 
                 <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-3xl flex items-center justify-center mx-auto mb-4">
-                    <span className="text-3xl">📈</span>
+                  <div className="w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-4">
+                    <img
+                      src="/images/icons/detailed_reports.png"
+                      alt="דוחות מפורטים"
+                      className="w-24 h-24 object-contain"
+                    />
                   </div>
                   <h4 className="text-xl font-semibold text-gray-900 mb-3">
                     דוחות מפורטים
@@ -599,8 +616,12 @@ export default function HomePage() {
                 </div>
 
                 <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-3xl flex items-center justify-center mx-auto mb-4">
-                    <span className="text-3xl">🔧</span>
+                  <div className="w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-4">
+                    <img
+                      src="/images/icons/remote_control.png"
+                      alt="בקרה מרחוק"
+                      className="w-24 h-24 object-contain"
+                    />
                   </div>
                   <h4 className="text-xl font-semibold text-gray-900 mb-3">
                     בקרה מרחוק
@@ -829,7 +850,7 @@ export default function HomePage() {
           </div>
 
           {/* Contact Features */}
-          <div className="grid md:grid-cols-3 gap-8">
+          {/* <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-3xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">⚡</span>
@@ -859,7 +880,7 @@ export default function HomePage() {
               </h4>
               <p className="text-gray-300">התקנה מקצועית תוך 48 שעות</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 

@@ -1,7 +1,18 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
+import { checkRateLimit, RATE_LIMIT_CONFIGS } from '../../lib/rateLimiter';
+import { verifyRecaptcha } from '../../lib/recaptcha';
+import {
+    getClientIP,
+    normalizeEmail,
+    normalizePhoneNumber,
+    isHoneypotTriggered,
+    isSubmittedTooQuickly,
+    generateRequestFingerprint,
+    validateEnvironmentVariables
+} from '../../lib/utils';
 
-// Validation schema for the contact form
+// Validation schema for the contact form with protection fields
 const contactFormSchema = z.object({
     fullName: z
         .string()
@@ -15,7 +26,11 @@ const contactFormSchema = z.object({
     email: z
         .string()
         .email("כתובת אימייל לא תקינה")
-        .min(5, "כתובת אימייל קצרה מדי")
+        .min(5, "כתובת אימייל קצרה מדי"),
+    // Protection fields
+    recaptchaToken: z.string().optional(),
+    honeypot: z.string().optional(),
+    formStartTime: z.number().optional()
 });
 
 type ContactFormData = z.infer<typeof contactFormSchema>;
@@ -136,18 +151,137 @@ async function retryWithBackoff<T>(
 }
 
 export async function POST(request: NextRequest) {
+    const startTime = Date.now();
+
     try {
+        // Validate environment variables
+        const envValidation = validateEnvironmentVariables();
+        if (!envValidation.valid) {
+            console.error('Missing required environment variables:', envValidation.missing);
+            return NextResponse.json({
+                success: false,
+                message: 'שגיאה בהגדרות המערכת. אנא צור קשר ב-WhatsApp: 0765991386'
+            }, { status: 500 });
+        }
+
         // Parse and validate the request body
         const body = await request.json();
+        console.log('Received request body:', {
+            ...body,
+            recaptchaToken: body.recaptchaToken ? 'present' : 'missing'
+        });
         const validatedData = contactFormSchema.parse(body);
+
+        // Extract client information
+        const clientIP = getClientIP(request);
+        const fingerprint = generateRequestFingerprint(request);
+        const normalizedEmail = normalizeEmail(validatedData.email);
+        const normalizedPhone = normalizePhoneNumber(validatedData.phone);
 
         console.log('Processing contact form submission:', {
             name: validatedData.fullName,
-            email: validatedData.email,
-            phone: validatedData.phone
+            email: normalizedEmail,
+            phone: normalizedPhone,
+            ip: clientIP,
+            fingerprint
         });
 
-        // Try to send to AllChat API with retries
+        // 1. Check honeypot field (bot detection)
+        if (isHoneypotTriggered(validatedData.honeypot || null)) {
+            console.warn('Honeypot triggered, likely bot submission:', { ip: clientIP, fingerprint });
+            return NextResponse.json({
+                success: false,
+                message: 'הבקשה נראית חשודה. אנא נסה שוב או צור קשר ב-WhatsApp: 0765991386'
+            }, { status: 400 });
+        }
+
+        // 2. Check submission timing (bot detection)
+        if (validatedData.formStartTime && isSubmittedTooQuickly(validatedData.formStartTime)) {
+            console.warn('Form submitted too quickly, likely bot:', { ip: clientIP, fingerprint });
+            return NextResponse.json({
+                success: false,
+                message: 'הטופס נשלח מהר מדי. אנא המתן מספר שניות ונסה שוב.'
+            }, { status: 400 });
+        }
+
+        // 3. Verify reCAPTCHA (if token is provided)
+        if (validatedData.recaptchaToken) {
+            console.log('About to verify reCAPTCHA token:', {
+                tokenType: typeof validatedData.recaptchaToken,
+                tokenLength: validatedData.recaptchaToken.length,
+                tokenPreview: validatedData.recaptchaToken.substring(0, 20) + '...'
+            });
+
+            const recaptchaResult = await verifyRecaptcha(validatedData.recaptchaToken);
+
+            console.log('reCAPTCHA verification result:', {
+                success: recaptchaResult.success,
+                score: recaptchaResult.score,
+                message: recaptchaResult.message
+            });
+
+            if (!recaptchaResult.success) {
+                console.warn('reCAPTCHA verification failed:', {
+                    ip: clientIP,
+                    fingerprint,
+                    score: recaptchaResult.score,
+                    message: recaptchaResult.message
+                });
+                return NextResponse.json({
+                    success: false,
+                    message: recaptchaResult.message || 'אימות reCAPTCHA נכשל. אנא נסה שוב או צור קשר ב-WhatsApp: 0765991386'
+                }, { status: 400 });
+            }
+            console.log('reCAPTCHA verification successful:', { score: recaptchaResult.score });
+        } else {
+            console.warn('No reCAPTCHA token provided, but continuing with lenient policy');
+        }
+
+        // 4. Check rate limits (multiple layers)
+
+        // IP-based rate limiting
+        const ipRateLimit = await checkRateLimit(clientIP, RATE_LIMIT_CONFIGS.IP);
+        if (!ipRateLimit.success) {
+            console.warn('IP rate limit exceeded:', { ip: clientIP, fingerprint });
+            return NextResponse.json({
+                success: false,
+                message: ipRateLimit.message
+            }, { status: 429 });
+        }
+
+        // Email-based rate limiting
+        const emailRateLimit = await checkRateLimit(normalizedEmail, RATE_LIMIT_CONFIGS.EMAIL);
+        if (!emailRateLimit.success) {
+            console.warn('Email rate limit exceeded:', { email: normalizedEmail, ip: clientIP });
+            return NextResponse.json({
+                success: false,
+                message: emailRateLimit.message
+            }, { status: 429 });
+        }
+
+        // Phone-based rate limiting
+        const phoneRateLimit = await checkRateLimit(normalizedPhone, RATE_LIMIT_CONFIGS.PHONE);
+        if (!phoneRateLimit.success) {
+            console.warn('Phone rate limit exceeded:', { phone: normalizedPhone, ip: clientIP });
+            return NextResponse.json({
+                success: false,
+                message: phoneRateLimit.message
+            }, { status: 429 });
+        }
+
+        // Global rate limiting
+        const globalRateLimit = await checkRateLimit('global', RATE_LIMIT_CONFIGS.GLOBAL);
+        if (!globalRateLimit.success) {
+            console.warn('Global rate limit exceeded:', { ip: clientIP, fingerprint });
+            return NextResponse.json({
+                success: false,
+                message: globalRateLimit.message
+            }, { status: 429 });
+        }
+
+        console.log('All security checks passed, processing submission');
+
+        // 5. Process the form submission
         try {
             await retryWithBackoff(async () => {
                 const success = await sendToAllChat(validatedData);
@@ -156,6 +290,14 @@ export async function POST(request: NextRequest) {
                 }
                 return success;
             }, 3, 1000);
+
+            // Log successful submission
+            console.log('Form submission successful:', {
+                email: normalizedEmail,
+                phone: normalizedPhone,
+                ip: clientIP,
+                processingTime: Date.now() - startTime
+            });
 
             // Success response
             return NextResponse.json({

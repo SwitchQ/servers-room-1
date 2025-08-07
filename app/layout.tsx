@@ -54,7 +54,7 @@ export default function RootLayout({
             <button
               onClick={scrollToTop}
               title="Go to top"
-              className="fixed bottom-10 right-10 z-50 bg-blue-400 hover:bg-blue-800 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg transition-colors duration-300"
+              className="fixed bottom-10 left-10 z-50 bg-blue-400 hover:bg-blue-800 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg transition-colors duration-300"
             >
               <Icon path={mdiArrowUp} size={1.2} />
             </button>
