@@ -201,7 +201,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = "" }) => {
             size="lg"
             loading={isSubmitting}
             disabled={isSubmitting}
-            className="w-full sm:w-auto min-w-[200px]"
+            className="w-full sm:w-auto min-w-[200px] rounded-2xl"
           >
             <Send className="w-5 h-5 ml-2" />
             {isSubmitting ? "שולח..." : "שלח הודעה"}

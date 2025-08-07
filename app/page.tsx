@@ -427,11 +427,11 @@ export default function HomePage() {
             <div className="flex flex-col lg:flex-row items-center gap-8">
               {/* Sensor */}
               <div className="flex flex-col items-center">
-                <div className="w-36 h-36 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-3xl flex items-center justify-center mb-4">
+                <div className="w-36 h-36 rounded-3xl flex items-center justify-center mb-4">
                   <img
                     src="/images/products/temperature-humidity-on-wall.png"
                     alt="חיישן"
-                    className="w-36 h-36 rounded-3xl"
+                    className="w-36 h-36 rounded-3xl shadow-lg"
                   />
                 </div>
                 <span className="text-lg font-semibold text-gray-900">
@@ -447,11 +447,11 @@ export default function HomePage() {
               </span>
               {/* Gateway */}
               <div className="flex flex-col items-center">
-                <div className="w-36 h-36 bg-gradient-to-br from-green-500 to-emerald-500 rounded-3xl flex items-center justify-center mb-4">
+                <div className="w-36 h-36 rounded-3xl flex items-center justify-center mb-4">
                   <img
                     src="/images/products/gateway-on-wall.png"
                     alt="מרכזיית BLE PoE"
-                    className="w-36 h-36 rounded-3xl"
+                    className="w-36 h-36 rounded-3xl shadow-lg"
                   />
                 </div>
                 <span className="text-lg font-semibold text-gray-900">
@@ -467,11 +467,11 @@ export default function HomePage() {
               </span>
               {/* Cloud */}
               <div className="flex flex-col items-center">
-                <div className="w-36 h-36 bg-gradient-to-br from-indigo-500 to-violet-500 rounded-3xl flex items-center justify-center mb-4">
+                <div className="w-36 h-36 rounded-3xl flex items-center justify-center mb-4">
                   <img
                     src="/images/backgrounds/secured-cloud.png"
                     alt="אפליקציה"
-                    className="w-36 h-36 rounded-3xl"
+                    className="w-36 h-36 rounded-3xl shadow-lg"
                   />
                 </div>
                 <span className="text-lg font-semibold text-gray-900">
@@ -487,11 +487,11 @@ export default function HomePage() {
               </span>
               {/* Application */}
               <div className="flex flex-col items-center">
-                <div className="w-36 h-36 bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl flex items-center justify-center mb-4">
+                <div className="w-36 h-36 rounded-3xl flex items-center justify-center mb-4">
                   <img
                     src="/images/backgrounds/application.jpg"
                     alt="אפליקציה"
-                    className="w-36 h-36 rounded-3xl"
+                    className="w-36 h-36 rounded-3xl shadow-lg"
                   />
                 </div>
                 <span className="text-lg font-semibold text-gray-900">
@@ -650,86 +650,91 @@ export default function HomePage() {
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               למה לבחור בפתרון של SwitchQ?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            {/* <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               פתרון מקיף לניטור חדרי שרתים ותקשורת עם הטכנולוגייה הכי המתקדמת
               והתמיכה הטובה ביותר בישראל
+            </p> */}
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              פתרון מקיף לניטור חדרי שרתים ותקשורת המבוסס על טכנולוגיות IoT
+              מתקדמות ותמיכה מקצועית בעברית
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-cyan-500"></div>
+              <div className="w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-4">
+                <img
+                  src="/images/icons/save_money.png"
+                  alt="חיסכון בעלויות"
+                  className="w-24 h-24 object-contain"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
+                חיסכון בעלויות
+              </h3>
+              <p className="text-gray-600 text-center leading-relaxed">
+                מערכת חכמה שמונעת תקלות יקרות, חוסכת באנרגיה ומפחיתה את עלויות
+                התחזוקה
+              </p>
+            </div>
+
+            <div className="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-cyan-500"></div>
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-4">
                 <img
-                  src="/images/icons/monitoring-24-7.svg"
-                  alt="ניטור 24/7"
-                  className="w-12 h-12"
+                  src="/images/icons/protected.png"
+                  alt="אמינות גבוהה"
+                  className="w-24 h-24 object-contain"
                 />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
-                ניטור 24/7
+                אמינות גבוהה
               </h3>
               <p className="text-gray-600 text-center leading-relaxed">
-                מעקב רציף אחר טמפרטורה, לחות ותנאי סביבה קריטיים עם דיווח כל 15
-                דקות
+                זמינות של 99.9% עם גיבוי מלא (failover) ותפקוד רציף גם בזמן
+                תקלות
               </p>
             </div>
 
             <div className="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 to-orange-500"></div>
-              <div className="w-20 h-20 bg-gradient-to-br from-red-100 to-orange-100 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-red-500"></div>
+              <div className="w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-4">
                 <img
-                  src="/images/icons/real-time-alerts.svg"
-                  alt="התראות בזמן אמת"
-                  className="w-12 h-12"
+                  src="/images/icons/support.png"
+                  alt="תמיכה מקצועית"
+                  className="w-24 h-24 object-contain"
                 />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
-                התראות בזמן אמת
+                תמיכה מקצועית
               </h3>
               <p className="text-gray-600 text-center leading-relaxed">
-                קבלת התראות מיידיות מהאפליקציה, ב-WhatsApp, ב-SMS, ובאימייל תוך
-                שניות
+                ליווי טכני 24/7 בעברית, כולל וואטסאפ, טלפון ואימייל – עם זמן
+                תגובה מהיר
               </p>
             </div>
 
             <div className="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-emerald-500"></div>
-              <div className="w-20 h-20 bg-gradient-to-br from-green-100 to-emerald-100 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-yellow-500"></div>
+              <div className="w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-4">
                 <img
-                  src="/images/icons/battery-life.svg"
-                  alt="5 שנות פעולה"
-                  className="w-12 h-12"
+                  src="/images/icons/touch_app.png"
+                  alt="התקנה ותפעול פשוטים"
+                  className="w-24 h-24 object-contain"
                 />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
-                5 שנות פעולה
+                התקנה ותפעול פשוטים
               </h3>
               <p className="text-gray-600 text-center leading-relaxed">
-                חיי סוללה ארוכים ללא צורך בתחזוקה או החלפות עם אחריות מלאה
-              </p>
-            </div>
-
-            <div className="group bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 shadow-soft hover:shadow-strong transition-all duration-500 hover:-translate-y-2 border border-gray-100 relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500"></div>
-              <div className="w-20 h-20 bg-gradient-to-br from-purple-100 to-pink-100 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                <img
-                  src="/images/icons/easy-setup.svg"
-                  alt="התקנה קלה"
-                  className="w-12 h-12"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
-                תפעול
-              </h3>
-              <p className="text-gray-600 text-center leading-relaxed">
-                האפליקציה הכי מתקדמת בישראל עם ממשק משתמש אינטואיטיבי
+                התקנה קלה וניהול מהיר דרך אפליקציה אינטואיטיבית בעברית
               </p>
             </div>
           </div>
 
           {/* Additional Benefits */}
-          <div className="mt-20 bg-gradient-to-br from-primary-50 to-secondary-50 rounded-3xl p-12 border border-primary-100">
+          {/* <div className="mt-20 bg-gradient-to-br from-primary-50 to-secondary-50 rounded-3xl p-12 border border-primary-100">
             <div className="text-center mb-12">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">
                 יתרונות נוספים שיחסכו לכם כסף
@@ -742,8 +747,12 @@ export default function HomePage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-3xl flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">💰</span>
+                <div className="w-24 h-24 rounded-3xl flex items-center justify-center mx-auto mb-4">
+                  <img
+                    src="/images/icons/save_money.png"
+                    alt="חיסכון בעלויות"
+                    className="w-24 h-24 object-contain"
+                  />
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
                   חיסכון בעלויות
@@ -777,7 +786,7 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
