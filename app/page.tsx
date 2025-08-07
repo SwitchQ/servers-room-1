@@ -90,9 +90,11 @@ export default function HomePage() {
       <section className="pt-28 pb-20 relative overflow-hidden min-h-screen flex items-center">
         {/* Background Image */}
         <div
+          id="hero-background-image"
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('/images/backgrounds/hero.png')",
+            // backgroundImage: "url('/images/backgrounds/hero.png')",
+            backgroundAttachment: "fixed",
           }}
         ></div>
 
@@ -897,7 +899,7 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer id="footer" className="bg-gray-900 text-white py-12">
         <div className="container-custom">
           <div className="text-center">
             <h3 className="text-2xl font-bold text-gradient mb-4">SwitchQ</h3>

@@ -56,6 +56,21 @@ body {
     /* WhatsApp green */
 }
 
+.floating-whatsapp {
+    bottom: 5.5rem;
+    /* left: calc(5rem + 18px); */
+    right: 0.75rem;
+}
+
+#hero-background-image {
+    background-image: url('/images/backgrounds/hero.png') !important;
+}
+
+@media (max-width: 768px) {
+    #hero-background-image {
+        background-image: url('/images/backgrounds/hero-mobile.png') !important;
+    }
+}
 
 /* Base Layer Customizations */
 @layer base {
