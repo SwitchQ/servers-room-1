@@ -220,7 +220,7 @@ export default function HomePage() {
               <div className="relative">
                 <div className="w-142 h-142 mx-auto mb-6 bg-gradient-to-br from-primary-50 to-secondary-50 rounded-3xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
                   <Image
-                    src="/images/products/temperature-humidity-on-wall.png"
+                    src="/images/products/temperature-humidity-on-wall.webp"
                     alt="חיישן טמפרטורה ולחות"
                     width={248}
                     height={248}
@@ -246,7 +246,7 @@ export default function HomePage() {
               <div className="relative">
                 <div className="w-124 h-124 mx-auto mb-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
                   <Image
-                    src="/images/products/leak-on-wall.png"
+                    src="/images/products/leak-on-wall.webp"
                     alt="חיישן הצפה"
                     width={248}
                     height={248}
@@ -272,7 +272,7 @@ export default function HomePage() {
               <div className="relative">
                 <div className="w-124 h-124 mx-auto mb-6 bg-gradient-to-br from-orange-50 to-red-50 rounded-3xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
                   <Image
-                    src="/images/products/pir-on-wall.png"
+                    src="/images/products/pir-on-wall.webp"
                     alt="גלאי תנועה"
                     width={248}
                     height={248}
@@ -299,7 +299,7 @@ export default function HomePage() {
               <div className="relative">
                 <div className="w-124 h-124 mx-auto mb-6 bg-gradient-to-br from-orange-50 to-red-50 rounded-3xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
                   <Image
-                    src="/images/products/power-consumption.png"
+                    src="/images/products/power-consumption.webp"
                     alt="חיישן צריכת חשמל"
                     width={248}
                     height={248}
@@ -325,7 +325,7 @@ export default function HomePage() {
               <div className="relative">
                 <div className="w-124 h-124 mx-auto mb-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
                   <Image
-                    src="/images/products/gateway-on-wall.png"
+                    src="/images/products/gateway-on-wall.webp"
                     alt="מרכזיית IoT"
                     width={248}
                     height={248}
@@ -545,8 +545,8 @@ export default function HomePage() {
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-200 to-purple-200 rounded-3xl blur opacity-60"></div>
                 <Image
-                  src="/images/backgrounds/alert-notifications.png"
-                  alt="התראות בזמן אמת"
+                  src="/images/backgrounds/alert-notifications.webp"
+                  alt="מערכת התראות מתקדמת"
                   width={600}
                   height={400}
                   className="relative w-full max-w-lg h-auto rounded-3xl shadow-2xl border-4 border-white"

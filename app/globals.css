@@ -63,12 +63,12 @@ body {
 }
 
 #hero-background-image {
-    background-image: url('/images/backgrounds/hero.png') !important;
+    background-image: url('/images/backgrounds/hero.webp') !important;
 }
 
 @media (max-width: 768px) {
     #hero-background-image {
-        background-image: url('/images/backgrounds/hero-mobile.png') !important;
+        background-image: url('/images/backgrounds/hero-mobile.webp') !important;
     }
 }
 
