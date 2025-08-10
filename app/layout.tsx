@@ -1,6 +1,7 @@
 "use client";
 import type { Metadata } from "next";
 import { Heebo } from "next/font/google";
+import Image from "next/image";
 import "./globals.css";
 import { useEffect, useState } from "react";
 import Icon from "@mdi/react";
@@ -206,10 +207,11 @@ export default function RootLayout({
             rel="noopener noreferrer"
             className="fixed floating-whatsapp z-50 bg-whatsapp hover:bg-green-400 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg transition-colors duration-300"
           >
-            <img
+            <Image
               src="/images/icons/whatsapp-border.svg"
               alt="WhatsApp"
-              className="inline-block w-7 h-7"
+              width={28}
+              height={28}
             />
           </a>
         )}
