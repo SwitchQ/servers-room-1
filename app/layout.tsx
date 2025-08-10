@@ -1,4 +1,5 @@
 import { Heebo } from "next/font/google";
+import Image from "next/image";
 import "./globals.css";
 import FloatingButtons from "./components/FloatingButtons";
 
@@ -123,7 +124,7 @@ export default function RootLayout({
           {children}
         </div>
         <FloatingButtons />
-        </body>
-      </html>
-    );
-  }
+      </body>
+    </html>
+  );
+}
