@@ -71,6 +71,7 @@ export default function HomePage() {
               <a
                 href="https://wa.me/972765991386?text=%D7%94%D7%99%D7%99%2C%20%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%9E%D7%95%D7%93%D7%A2%D7%94%20%D7%A9%D7%9C%D7%9B%D7%9D%20%D7%A2%D7%9C%20%D7%A0%D7%99%D7%98%D7%95%D7%A8%20%D7%97%D7%93%D7%A8%20%D7%A9%D7%A8%D7%AA%D7%99%D7%9D%0A%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="hidden sm:block text-primary-500 hover:text-primary-600 font-medium transition-colors"
               >
                 <span className="inline-flex items-center gap-2 mx-2 me-6">
@@ -356,6 +357,7 @@ export default function HomePage() {
             <a
               href="https://www.switchq.co.il/"
               target="_blank"
+              rel="noopener noreferrer"
               className="bg-gradient-to-r from-primary-500 to-secondary-500 text-white text-xl px-10 py-5 rounded-3xl font-semibold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
             >
               למוצרים נוספים
