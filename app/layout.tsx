@@ -194,6 +194,7 @@ export default function RootLayout({
               onClick={scrollToTop}
               title="Go to top"
               className="fixed bottom-10 left-10 z-50 bg-blue-400 hover:bg-blue-800 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg transition-colors duration-300"
+              aria-label="Scroll to top"
             >
               <Icon path={mdiArrowUp} size={1.2} />
             </button>
@@ -205,6 +206,7 @@ export default function RootLayout({
             target="_blank"
             rel="noopener noreferrer"
             className="fixed floating-whatsapp z-50 bg-whatsapp hover:bg-green-400 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg transition-colors duration-300"
+            aria-label="Open WhatsApp chat"
           >
             <img
               src="/images/icons/whatsapp-border.svg"
