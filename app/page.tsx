@@ -37,6 +37,7 @@ export default function HomePage() {
               <a
                 href="#products"
                 className="text-gray-700 hover:text-primary-500 transition-all duration-300 font-medium relative group me-8"
+                aria-label="Go to products section"
               >
                 מוצרים
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
@@ -44,6 +45,7 @@ export default function HomePage() {
               <a
                 href="#how-it-works"
                 className="text-gray-700 hover:text-primary-500 transition-all duration-300 font-medium relative group"
+                aria-label="Learn how it works section"
               >
                 איך זה עובד
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
@@ -51,6 +53,7 @@ export default function HomePage() {
               <a
                 href="#benefits"
                 className="text-gray-700 hover:text-primary-500 transition-all duration-300 font-medium relative group"
+                aria-label="View benefits section"
               >
                 יתרונות
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
@@ -58,6 +61,7 @@ export default function HomePage() {
               <a
                 href="#contact"
                 className="text-gray-700 hover:text-primary-500 transition-all duration-300 font-medium relative group"
+                aria-label="Go to contact section"
               >
                 יצירת קשר
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-500 transition-all duration-300 group-hover:w-full"></span>
