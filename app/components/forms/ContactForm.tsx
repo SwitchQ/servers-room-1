@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Send, CheckCircle, AlertCircle, Shield } from "lucide-react";
+import { useRouter } from "next/navigation";
 import Button from "../ui/Button";
 import Input from "../ui/Input";
 import { useRecaptcha } from "../../lib/hooks/useRecaptcha";
@@ -42,6 +43,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = "" }) => {
   >("idle");
   const [submitMessage, setSubmitMessage] = useState<string>("");
   const [formStartTime] = useState<number>(Date.now());
+  const router = useRouter();
 
   // Initialize reCAPTCHA
   const {
@@ -97,9 +99,9 @@ const ContactForm: React.FC<ContactFormProps> = ({ className = "" }) => {
       const result = await response.json();
 
       if (result.success) {
-        setSubmitStatus("success");
-        setSubmitMessage(result.message);
+        // Reset form and redirect to success page
         reset();
+        router.push("/submit#contact");
       } else {
         setSubmitStatus("error");
         setSubmitMessage(
